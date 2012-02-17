@@ -1,0 +1,150 @@
+<header class="axle_main_header">| Axle | 'Forms'</header>
+<section class="axle_body">
+	<div class="axle_instructions">
+		<header class="axle_header">
+			<p>1. input type="text"</p>
+		</header>
+		<div>
+			<fieldset class="styleguide_form_frame editor-container" style="">
+				<label for="text_field">This is a label<span>(optional)</span></label>
+				<input type="text" class="" name="" id="text_field" value="" placeholder="placeholder text" />
+				<p class="instructional">This is instructional text</p>
+				<p class="fail" style="display:none;">This is fail text</p>
+				
+				<label for="text_field">This is a label<span>(optional)</span></label>
+				<input type="text" class="" name="" id="text_field" value="" placeholder="placeholder text" />
+				<p class="instructional">This is instructional text</p>
+				<p class="fail" style="display:none;">This is fail text</p>
+				
+			</fieldset>
+		</div>
+		<div>
+			<p>Example code:</p>
+			<pre class="prettyprint">
+&lt;fieldset&gt;
+  &lt;label for=&quot;text_field&quot;&gt;This is a label&lt;span&gt;(optional)&lt;/span&gt;&lt;/label&gt;
+  &lt;input type=&quot;text&quot; class=&quot;&quot; name=&quot;&quot; id=&quot;text_field&quot; value=&quot;&quot; placeholder=&quot;placeholder text&quot; /&gt;
+  &lt;p class=&quot;instructional&quot;&gt;This is instructional text&lt;/p&gt;
+  &lt;p class=&quot;fail&quot; style=&quot;display:none;&quot;&gt;This is fail text&lt;/p&gt;
+&lt;/fieldset&gt;				
+			</pre>
+		</div>
+		
+		<header>
+			<p>1.1 input type="text" w/error</p>
+		</header>
+		<div>
+			<fieldset class="styleguide_form_frame editor-container" style="">
+				<label for="text_field">This is a label<span>(optional)</span></label>
+				<input type="text" class="fail" name="" id="text_field" value="" />
+				<p class="instructional">This is instructional text</p>
+				<p class="fail" style="display:block;">This is fail text</p>
+				
+				<label for="text_field">This is a label<span>(optional)</span></label>
+				<input type="text" class="fail" name="" id="text_field" value="" />
+				<p class="instructional">This is instructional text</p>
+				<p class="fail" style="display:block;">This is fail text</p>
+			</fieldset>
+		</div>
+		
+		<div>
+			<p>Add <code>.fail</code> class to &lt;input&gt; tag.</p>
+			<p>Example code:</p>
+			<pre class="prettyprint">
+&lt;fieldset&gt;
+  &lt;label for=&quot;text_field&quot;&gt;This is a label&lt;span&gt;(optional)&lt;/span&gt;&lt;/label&gt;
+  &lt;input type=&quot;text&quot; class=&quot;fail&quot; name=&quot;&quot; id=&quot;text_field&quot; value=&quot;&quot; /&gt;
+  &lt;p class=&quot;instructional&quot;&gt;This is instructional text&lt;/p&gt;
+  &lt;p class=&quot;fail&quot; style=&quot;display:block;&quot;&gt;This is fail text&lt;/p&gt;
+&lt;/fieldset&gt;
+			</pre>
+		</div>
+		
+		<header>
+			<p>3. select</p>
+		</header>
+		<div class="master_container" id="">
+			<fieldset class="styleguide_form_frame editor-container" style="">
+				<label>This is a label<span>(optional)</span></label>
+				<select>
+					<option value="">text</option>
+					<option value="">text</option>
+					<option value="">text</option>
+					<option value="">text</option>
+				</select>
+				<p class="instructional">This is instructional text</p>
+				<p class="fail" style="display:none;">This is fail text</p>
+				
+				<label>This is a label<span>(optional)</span></label>
+				<select>
+					<option value="">text</option>
+					<option value="">text</option>
+					<option value="">text</option>
+					<option value="">text</option>
+				</select>
+				<p class="instructional">This is instructional text</p>
+				<p class="fail" style="display:none;">This is fail text</p>
+			</fieldset>
+		</div>
+		<div>
+			<p>Example code:</p>
+			<pre class="prettyprint">
+&lt;fieldset&gt;
+  &lt;label&gt;This is a label&lt;span&gt;(optional)&lt;/span&gt;&lt;/label&gt;
+  &lt;select&gt;
+    &lt;option value=&quot;&quot;&gt;text&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;text&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;text&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;text&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;p class=&quot;instructional&quot;&gt;This is instructional text&lt;/p&gt;
+  &lt;p class=&quot;fail&quot; style=&quot;display:none;&quot;&gt;This is fail text&lt;/p&gt;
+&lt;/fieldset&gt;				
+			</pre>
+		</div>
+		
+		<header>
+			<p>3.1 select w/fail</p>
+		</header>
+		<div class="master_container" id="">
+			<fieldset class="styleguide_form_frame editor-container" style="">
+				<label>This is a label<span>(optional)</span></label>
+				<select class="fail">
+					<option value="">text</option>
+					<option value="">text</option>
+					<option value="">text</option>
+					<option value="">text</option>
+				</select>
+				<p class="instructional">This is instructional text</p>
+				<p class="fail" style="display:block;">This is fail text</p>
+				
+				<label>This is a label<span>(optional)</span></label>
+				<select class="fail">
+					<option value="">text</option>
+					<option value="">text</option>
+					<option value="">text</option>
+					<option value="">text</option>
+				</select>
+				<p class="instructional">This is instructional text</p>
+				<p class="fail" style="display:block;">This is fail text</p>
+			</fieldset>
+		</div>
+		<div>
+			<p>Example code:</p>
+			<pre class="prettyprint">
+&lt;fieldset&gt;
+  &lt;label&gt;This is a label&lt;span&gt;(optional)&lt;/span&gt;&lt;/label&gt;
+  &lt;select class=&quot;fail&quot;&gt;
+    &lt;option value=&quot;&quot;&gt;text&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;text&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;text&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;text&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;p class=&quot;instructional&quot;&gt;This is instructional text&lt;/p&gt;
+  &lt;p class=&quot;fail&quot; style=&quot;display:block;&quot;&gt;This is fail text&lt;/p&gt;
+&lt;/fieldset&gt;				
+			</pre>
+		</div>
+		
+	</div>
+</section>

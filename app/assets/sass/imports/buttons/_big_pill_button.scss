@@ -1,0 +1,151 @@
+/////// big pill buttons ///////////
+
+// edit your object variables //
+// ---------------------------------------//
+///// primary colors ////////
+@mixin secondary_big_pill_button_color {
+	@include alpha_color_gradient;
+}
+
+@mixin secondary_big_pill_button_color_hover {
+	@include bravo_color_gradient;
+}
+
+
+///////// icon padding ///////////
+@mixin big_pill_play_icon_button_padding {
+	padding: #{4 / $em}em #{10 / $em}em #{4 / $em}em #{40 / $em}em;
+	.msie7 &, .msie8 &, .msie9 & {
+		padding: #{4 / $em}em #{10 / $em}em;
+	}
+}
+
+
+///////// primary button colors with icon call ///////////////
+@mixin big_pill_play_icon_button_colors {
+	// alpha_color_gradient //	
+	// w3c //
+	@include linear_gradient_bkgimage ('#{$imgDir}play_icon.png',5% 50%, $echo_color_bravo, $alpha_color_gradient_var_w3c);
+	// legacy safari //
+	@include linear_gradient_bkgimage_legacy_safari ('#{$imgDir}play_icon.png', 5% 50%, $alpha_color_gradient_var_legacy_safari);
+	// IE suck
+	@include linear_gradient_legacy_ie ($echo_color_delta, $echo_color_delta);
+	@include big_pill_play_icon_button_padding;
+}
+
+
+@mixin big_pill_play_icon_button_colors_hover {
+	// bravo_color_gradient //
+	// w3c //
+	@include linear_gradient_bkgimage ('#{$imgDir}play_icon.png',5% 50%, $echo_color_delta, $bravo_color_gradient_var_w3c);
+	// legacy safari //
+	@include linear_gradient_bkgimage_legacy_safari ('#{$imgDir}play_icon.png', 5% 50%, $bravo_color_gradient_var_legacy_safari);
+	// IE suck
+	@include linear_gradient_legacy_ie ($echo_color_delta, $echo_color_delta);
+	@include big_pill_play_icon_button_padding;
+}
+
+
+@mixin big_pill_play_icon_button {
+	@include big_pill_play_icon_button_colors;
+	border-color: $echo_color_echo;
+	&:hover, &:active {
+		@include big_pill_play_icon_button_colors_hover;
+	}
+}
+
+////////// disabled button /////////////
+@mixin disabled_big_pill_button {
+	background: $input_disabled_bkg;
+	@include disabled_text_shadow;
+	@include disabled_box_shadow;
+	color: $input_disabled_text;
+	border-color: $input_disabled_border;
+	padding: #{4 / $em}em #{10 / $em}em;
+}
+
+
+// This is your button mixin //
+// ---------------------------------------//
+@mixin big_pill_button ($icon: default, $font_size: xxxx_large) {
+	button, .button {
+		border: #{1 / $em}em solid $bravo_color;
+		//// font-size logic
+		@if $font_size == large {
+			@include large;
+		}
+		@else if $font_size == x_large {
+			@include x_large;
+		}
+		@else if $font_size == xx_large {
+			@include xx_large;
+		}
+		@else if $font_size == xxx_large {
+			@include xxx_large;
+		}
+		@else if $font_size == xxxx_large {
+			@include xxxx_large;
+		}
+		
+		/// icon logic
+		@if $icon == play_icon {
+			@include big_pill_play_icon_button;
+			&:nth-child(1n+2) {
+				@include big_pill_play_icon_button;
+			}
+		}
+		@else {
+			&:nth-child(1n+2) {
+				@include secondary_big_pill_button_color;
+				color: $white;
+				font-weight: bold;
+			}
+			padding: #{4 / $em}em #{10 / $em}em;
+			&:hover, &:active {
+				&:nth-child(1n+2) {
+					@include secondary_big_pill_button_color_hover;	
+				}
+			}
+		}
+		
+		&:hover {
+			@extend .primary_button_hover;
+			text-decoration: none;
+		}
+		
+		@include border_radius(#{4 / $xxxx_large_point_size}em);
+		color: $white;
+		@media print {
+			color: $alpha_grey;
+		}
+		&:nth-child(1n+2) {
+			border-color: $echo_color_echo;
+			color: $white;
+				font-weight: bold;
+		}
+		font-weight: bold;
+		@include primary_text_shadow;
+		@include primary_box_shadow;
+		.msie9 & {
+			@include border_radius(0);
+		}
+		&[disabled] {
+			@include disabled_big_pill_button;
+			font-weight: normal;
+			&:hover {
+				@include disabled_big_pill_button;
+				cursor: auto;
+			}
+		}
+	}
+	.button {
+		display: inline-block;
+		font-family: $primary_font_family;
+		&:hover {
+			//text-decoration: none;
+		}
+	}
+} 
+
+// Find button object classes in /public/styles/sass/imports/_oocss.scss //
+// ---------------------------------------//

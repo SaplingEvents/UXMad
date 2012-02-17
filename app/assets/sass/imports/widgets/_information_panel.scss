@@ -1,0 +1,40 @@
+//////// mixin /////////
+@mixin information_panel {
+	@extend .grid_12_6;
+	width: #{(460 - 22) / $em}em;
+	.ie7 & {
+		width: #{(457 - 22) / $em}em;
+	}
+	@include standard_rounded_border;
+	padding: #{10 / $em}em;
+	&:first-child {
+		@include alpha;
+	}
+	&:last-child {
+		@include omega;
+	}
+	h2 {
+		@include panel_header;		
+	}
+	article {
+		padding: #{20 / $em}em #{10 / $em}em;
+		border-bottom: 1px solid $delta_grey; 
+		h3 {
+			@include medium;
+			font-weight: bold;
+			margin-bottom: 1em;
+		}
+		&:last-child {
+			border: 0;
+		}
+	}
+	.sub_article_push {
+		margin-left: #{10 / $em}em;
+	}
+}
+
+
+//////// class object for @extend ////////////
+.information_panels {
+	@include information_panel;
+}

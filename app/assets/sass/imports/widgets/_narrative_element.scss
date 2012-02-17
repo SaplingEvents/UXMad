@@ -1,0 +1,51 @@
+////  narrative_element  ////
+// --------------------------
+@mixin narrative_element {
+	@extend .grid_16_12;
+	@extend .alpha;
+	@extend .omega;
+	@extend .clearfix;
+	border-bottom: 1px solid $delta_grey;
+	padding-bottom: #{40 / $em}em;
+	margin-top: #{40 / $em}em;
+	h3 {
+		@include heading($font_size: $heading_4, $family: lubalin);
+	}
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: #{40 / $em}em;
+	}
+	> li {
+		@extend .grid_16_6;
+		&:first-child {
+			@extend .alpha;
+		}
+		&:last-child {
+			@extend .omega;
+		}
+	}
+	.media {
+		@extend .grid_16_6;
+		min-height: #{200 / $em}em;
+	}
+	.text {
+		@extend .bulleted_list;
+	}
+	&:nth-child(2n+2) {
+		.media {
+			float: right;
+			margin: 0 0 0 #{10 / $em}em;
+		}
+		.text {
+			margin: 0 #{10 / $em}em 0 0;
+		}
+	}
+}
+
+////  narrative_element  ////
+
+.narrative_elements {
+	@include narrative_element;
+}

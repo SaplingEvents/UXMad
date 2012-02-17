@@ -1,0 +1,25 @@
+//
+// General aggregation of import resources.
+// Notes on usage of these files are as follows ....
+//
+// -------------------------------------------------------------------------
+// 
+// For other SCSS mixin files within the 'imports' directory
+// Place '@import "mixin_arguments";' on the fist line
+//
+// -------------------------------------------------------------------------- 
+// 
+// In order to use this magic, you will need to import the aggregated file
+// Place '@import "imports/_imports.scss";' on the first line
+//
+// --------------------------------------------------------------------------
+
+
+@import "_mixin_arguments";
+
+@import "gradients/_gradients";
+@import "_design";
+@import "_text";
+@import "buttons/_buttons";
+@import "_forms";
+@import "_grid";

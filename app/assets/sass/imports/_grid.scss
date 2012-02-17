@@ -1,0 +1,202 @@
+@import "mixin_arguments";
+
+// ...............
+// 960 GRID SYSTEM
+// ...............
+// 
+// Created by Nathan Smith. See the official site for more info: http://960.gs/
+// 
+// GPL license:
+// http://www.gnu.org/licenses/gpl.html
+// 
+// MIT license:
+// http://www.opensource.org/licenses/mit-license.php
+// ---------------------------------------------------------------------------
+// 
+// Updated by Dale Sande
+// It is amazing how complex this gets, can't imagine trying to do this in old fashioned CSS
+//
+
+
+///////// Base values for building grid ///////////
+// ------------------------------------------------
+$base: 10;	// equal to 10px in the standard 960.gs
+$grid_960: 960 / 100%;
+
+
+///////// standard gutter width /////////
+$col_gutter: $base * 2;
+
+///////// setting default unit of measurement /////////
+$default_grid_uom: em; //use either 'em' or 'percent'
+
+
+// 'grid_placement' sets display, float and margin for the block
+// this mixin is called into 'the_grid' 
+@mixin grid_placement($grid_uom, $grid_spec, $margin: $base) {
+	//display: inline;
+	float: left;
+	
+	@if $grid_uom == em {
+		$margin_calc: #{$margin / $em}rem;
+		margin: 0 $margin_calc;
+	}
+	@else if $grid_uom == percent {
+		$margin_calc: #{$margin / $grid_960};
+		margin: 0 $margin_calc;
+	}
+}
+
+// 'the_grid' determines width by taking column count, calculates gutter count
+@mixin the_grid($col_count, $base_value, $grid_uom, $grid_spec) {
+	$col_gutter_width: ($col_count - 1) * $col_gutter + ($col_count * $base_value);
+	
+	@include grid_placement($grid_uom, $grid_spec);
+	
+	@if $grid_uom == em {
+		$grid_width: #{$col_gutter_width / $em}rem;
+		width: $grid_width;
+	}
+	@else if $grid_uom == percent {
+		$grid_width: $col_gutter_width / $grid_960;
+		width: $grid_width;
+	}
+}
+
+
+///////// 12/16 col 960 grid system ///////////
+// ----------------------------------------
+@mixin grid($type, $col_count, $grid_uom: $default_grid_uom, $grid_spec: grid-960) {  
+	@if $type == 12 {
+		$col_width: $type * 5;
+		@include the_grid($col_count, $col_width, $grid_uom, $grid_spec);
+	}
+	@else if $type == 16 {
+		$col_width: $type * 2.5;
+		@include the_grid($col_count, $col_width, $grid_uom, $grid_spec);
+	}
+}
+
+///////// prefix value accounts for a full column in the grid ////////////
+// -----------------------------------------------------------------------
+@mixin prefix($type, $col_count, $grid_uom: $default_grid_uom) {
+	@if $grid_uom == em {
+		@if $type == 12 {
+			$width_gutter: 80;
+			$padding_width: #{($width_gutter * $col_count) / $em}rem;
+			padding-left: $padding_width;
+		}
+		@else if $type == 16 {
+			$width_gutter: 60;
+			$padding_width: #{($width_gutter * $col_count) / $em}rem;
+			padding-left: $padding_width;
+		}
+	}
+	@else if $grid_uom == percent {
+		@if $type == 12 {
+			$width_gutter: 80;
+			$grid_width: ($width_gutter * $col_count) / $grid_960;
+			padding-left: $grid_width;
+		}
+		@else if $type == 16 {
+			$width_gutter: 60;
+			$grid_width: ($width_gutter * $col_count) / $grid_960;
+			padding-left: $grid_width;
+		}
+	}
+}
+
+///////// suffix value accounts for a full column in the grid ////////////
+// -----------------------------------------------------------------------
+
+@mixin suffix($type, $col_count, $grid_uom: $default_grid_uom) {
+	@if $grid_uom == em {
+		@if $type == 12 {
+			$width_gutter: 80;
+			$padding_width: #{($width_gutter * $col_count) / $em}rem;
+			padding-right: $padding_width;
+		}
+		@else if $type == 16 {
+			$width_gutter: 60;
+			$padding_width: #{($width_gutter * $col_count) / $em}rem;
+			padding-right: $padding_width;
+		}
+	}
+	@else if $grid_uom == percent {
+		@if $type == 12 {
+			$width_gutter: 80;
+			$grid_width: ($width_gutter * $col_count) / $grid_960;
+			padding-right: $grid_width;
+		}
+		@else if $type == 16 {
+			$width_gutter: 60;
+			$grid_width: ($width_gutter * $col_count) / $grid_960;
+			padding-right: $grid_width;
+		}
+	}
+}
+
+///////// push value accounts for a full column in the grid ////////////
+// -----------------------------------------------------------------------
+
+@mixin push($type, $col_count, $grid_uom: $default_grid_uom) {
+	position: relative;
+	@if $grid_uom == em {
+		@if $type == 12 {
+			$width_gutter: 80;
+			left: #{($width_gutter * $col_count) / $em}rem;
+		}
+		@else if $type == 16 {
+			$width_gutter: 60;
+			left: #{($width_gutter * $col_count) / $em}rem;
+		}
+	}
+	@else if $grid_uom == percent {
+		@if $type == 12 {
+			$width_gutter: 80;
+			left: ($width_gutter * $col_count) / $grid_960;
+		}
+		@else if $type == 16 {
+			$width_gutter: 60;
+			left: ($width_gutter * $col_count) / $grid_960;
+		}
+	}
+}
+
+
+///////// pull value accounts for a full column in the grid ////////////
+// -----------------------------------------------------------------------
+
+@mixin pull($type, $col_count, $grid_uom: $default_grid_uom) {
+	position: relative;
+	@if $grid_uom == em {
+		@if $type == 12 {
+			$width_gutter: 80;
+			right: #{($width_gutter * $col_count) / $em}rem;
+		}
+		@else if $type == 16 {
+			$width_gutter: 60;
+			right: #{($width_gutter * $col_count) / $em}rem;
+		}
+	}
+	@else if $grid_uom == percent {
+		@if $type == 12 {
+			$width_gutter: 80;
+			right: ($width_gutter * $col_count) / $grid_960;
+		}
+		@else if $type == 16 {
+			$width_gutter: 60;
+			right: ($width_gutter * $col_count) / $grid_960;
+		}
+	}
+}
+
+/////////// `Grid >> Children (Alpha ~ First, Omega ~ Last) ///////////
+// --------------------------------------------------------------------
+@mixin alpha() {
+	margin-left: 0;
+}
+
+@mixin omega() {
+	margin-right: 0;
+}

@@ -1,0 +1,20 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+
+#will ignore all .css files as project progresses
+public/stylesheets/core.css
+
+#updates made to run locally, typically don't track in Git
+database.yml
+
+#don't need to track sass cache
+.sass-cache/
+
+#db was not tracked prior, not tracking now
+db/med2.sql
+
+
+#will update this later so that all css is ignored, only want to track sass files
+public/stylesheets/core.css
