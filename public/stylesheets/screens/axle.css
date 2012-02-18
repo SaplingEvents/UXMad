@@ -275,6 +275,30 @@
   hgroup .headings_3 {
     margin-bottom: 0 !important; }
 
+.block_header_1 {
+  font-size: 1.714rem;
+  line-height: 4.857rem;
+  text-align: center;
+  background: #231f20;
+  color: white;
+  font-weight: bolder; }
+
+.block_header_2 {
+  font-size: 1.714rem;
+  line-height: 4.857rem;
+  text-align: center;
+  background: #e31e25;
+  color: white;
+  font-weight: bolder; }
+
+.block_header_3 {
+  font-size: 1.714rem;
+  line-height: 4.857rem;
+  text-align: center;
+  background: #00acdc;
+  color: white;
+  font-weight: bolder; }
+
 .small {
   font-size: 0.857em;
   line-height: 1.5em; }
@@ -308,6 +332,12 @@
 
 .capitalize {
   text-transform: capitalize; }
+
+/* icon fonts alpha */
+.iconfont_alpha {
+  font-family: PointersRegular;
+  font-size: 1.571rem;
+  letter-spacing: 10px; }
 
 /* standard content block styling */
 /* ------------------------------ */

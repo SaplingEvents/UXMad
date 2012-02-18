@@ -5,12 +5,12 @@
 			<p>1. Heading Text</p>
 			<p>Font styles are not exclusive to heading tags. SASS mixins are applied to the illustrated tags by default.  Please apply the appropriate extend to redefine the heading tag to accommodate style and SEO.</p>
 		</header>
-		<article class="axle_representation">
+		<article>
 			<h1>.headings_1; Lorem ipsum dolor sit amet malesuada</h1>
 			<h2>.headings_2; Lorem ipsum dolor sit amet malesuada</h2>
 			<h3>.headings_3; Lorem ipsum dolor sit amet malesuada</h3>
 		</article>
-		<article class="axle_instructions">
+		<article>
 			<p>Semantic OOCSS @extend Example:</p>
 			<pre class="prettyprint">
 h1 {
@@ -26,7 +26,31 @@ h3 {
 		</article>
 		
 		<header class="axle_header">
-			<p>2. body text</p>
+			<p>2. Block heading text</p>
+			<p>Font styles are not exclusive to heading tags. SASS mixins are applied to the illustrated tags by default.  Please apply the appropriate extend to redefine the heading tag to accommodate style and SEO.</p>
+		</header>
+		<article class="block_header" style="float: left; width: 100%;">
+			<h1 class="block_header_1">.block_header_1; Lorem ipsum dolor sit amet malesuada</h1>
+			<h1 class="block_header_2">.block_header_2; Lorem ipsum dolor sit amet malesuada</h1>
+			<h1 class="block_header_3">.block_header_3; Lorem ipsum dolor sit amet malesuada</h1>
+		</article>
+		<article class="axle_instructions">
+			<p>Semantic OOCSS @extend Example:</p>
+			<pre class="prettyprint">
+h1 {
+  @extend .block_header_1;
+}
+h1 {
+  @extend .block_header_2;
+}
+h1 {
+  @extend .block_header_3;
+}
+			</pre>
+		</article>
+		
+		<header class="axle_header">
+			<p>3. body text</p>
 			<p>Font styles are based on <code>em</code> scales, see <a href="http://www.alistapart.com/articles/howtosizetextincss/">How to Size Text in CSS</a>.  Setting the 'medium' or base font size for the application on the <code>body</code> tag sets the app precedence.</p> 
 			<p>At the appropriate block level apply the SCSS extend to the semantically named class in your design SCSS.  </p>
 		</header>
@@ -61,6 +85,31 @@ h3 {
 			<p><b>HTML Example:</b></p>
 			<pre class="prettyprint">
 &lt;p&gt;This is text &lt;a href=&quot;#&quot;&gt;with a link&lt;/a&gt; in it.&lt;/p&gt;			
+			</pre>
+		</article>
+		
+		<header class="axle_header">
+			<p>4. Icon fonts</p>
+			<p>Icon fonts are used to address iconic imagery in the deisgn.  To see all the glifs for <a href="http://www.dafont.com/pointers.font" target="_blank">this font</a>.</p>
+			<p>Either extend or place the class of <code>.iconfont_alpha</code> on the parent block for the type selection. </p>
+		</header>
+		<article class="iconfont_alpha">
+			<p>abcdefghijklmnopqrstuvwxyz</p>
+			<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+			<p>1234567890</p>
+			<p>!@#$%^&*()</p>
+			<p>-=_+[]{};':",./&lt;&gt;?</p>
+			<p>&iexcl;1</p>
+		</article>
+		<article class="axle_instructions">
+			<p>Semantic OOCSS @extend Example:</p>
+			<pre class="prettyprint">
+&lt;div class=&quot;iconfont_alpha&quot;&gt;
+  &lt;p&gt;abcdefghijklmnopqrstuvwxyz&lt;/p&gt;
+  &lt;p&gt;1234567890&lt;/p&gt;
+  &lt;p&gt;!@#$%^&amp;*()&lt;/p&gt;
+  &lt;p&gt;&iexcl;1&lt;/p&gt;
+&lt;/div&gt;
 			</pre>
 		</article>
 	</article>
