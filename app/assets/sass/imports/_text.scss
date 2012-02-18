@@ -1,42 +1,39 @@
 // All google font includes are placed in the RESET.SCSS file
 // -----------------------------------------------------------
 
-//@import "font_libraries/_Lubalin.scss";
-
 @import "mixin_arguments";
 
 // * ------------------
 // Type defaults
 // * ------------------
 // only need to edit default font size and family, magical SASS takes care of the rest
-$font_size: 12;
-$legacy_font_size: 10;
+$font_size: 14;
+//$legacy_font_size: 10;
 $em: $font_size;
 
-$heading_1: 46;
-$heading_2: 32;
-$heading_3: 28;
-$heading_4: 18;
+$heading_1: 38;
+$heading_2: 24;
+$heading_3: 22;
+//$heading_4: 18;
 
-$xx_small_point_size: 6;
-$x_small_point_size: 9;
-$small_point_size: 10;
-$large_point_size: 14;
-$x_large_point_size: 16;
-$xx_large_point_size: 18;
-$xxx_large_point_size: 20;
-$xxxx_large_point_size: 22;
+//$xx_small_point_size: 6;
+//$x_small_point_size: 9;
+$small_point_size: 12;
+$large_point_size: 16;
+$x_large_point_size: 18;
+//$xx_large_point_size: 18;
+//$xxx_large_point_size: 20;
+//$xxxx_large_point_size: 22;
 
 $line: $font_size * 1.5;
 $line_height: #{$line / $em}em;
 
-$primary_font_family: #{Arial, sans-serif};
+$primary_font_family: #{Helvetica, serif};
 @mixin primary_font_family {
 	font-family: $primary_font_family;
 }
 $secondary_font_family: #{Verdana, Arial, Helvetica, sans-serif};
-$heading_font_family: #{Arial, Helvetica, serif};
-$webfont_alpha: #{'ITC Lubalin Graph', Arial, sans-serif};
+$heading_font_family: #{'Puritan', sans-serif};
 
 //////// heading text mixins //////////
 // ------------------------------------------------
@@ -46,11 +43,8 @@ $webfont_alpha: #{'ITC Lubalin Graph', Arial, sans-serif};
 	line-height: $line_height;
 	font-weight: $font_weight;
 	margin-bottom: #{$margin_bottom / $font_size}em;
-	@if $family == lubalin {
-		font-family: $webfont_alpha;
-		.ja & {
-			font-family: $primary_font_family;
-		}
+	@if $family == Puritan {
+		font-family: $heading_font_family;
 	}
 	hgroup & {
 		margin-bottom: 0 !important;
@@ -73,16 +67,16 @@ $webfont_alpha: #{'ITC Lubalin Graph', Arial, sans-serif};
 // ------------------------------------------------
 
 
-$xx_small_em: #{$xx_small_point_size / $em}em;
-@mixin xx_small ($size: $xx_small_em, $line-height: $line_height) {
-	@include font($size, $line-height); 
-}
-
-
-$x_small_em: #{$x_small_point_size / $em}em;
-@mixin x_small ($size: $x_small_em, $line-height: $line_height) {
-	@include font($size, $line-height); 
-} 
+// $xx_small_em: #{$xx_small_point_size / $em}em;
+// @mixin xx_small ($size: $xx_small_em, $line-height: $line_height) {
+// 	@include font($size, $line-height); 
+// }
+// 
+// 
+// $x_small_em: #{$x_small_point_size / $em}em;
+// @mixin x_small ($size: $x_small_em, $line-height: $line_height) {
+// 	@include font($size, $line-height); 
+// } 
 
 
 $small_em: #{$small_point_size / $em}em;
@@ -101,29 +95,29 @@ $large_em: #{$large_point_size / $em}em;
 }
 
 
-$x_large_em: #{$x_large_point_size / $em}em;
-@mixin x_large ($size: $x_large_em, $line-height: $line_height) {
-	@include font($size, $line-height); 
-}
-
-
-$xx_large_em: #{$xx_large_point_size / $em}em;
-@mixin xx_large ($size: $xx_large_em, $line-height: $line_height) {
-	@include font($size, $line-height); 
-}
-
-
-$xxx_large_em: #{$xxx_large_point_size / $em}em;
-@mixin xxx_large ($size: $xxx_large_em, $line-height: $line_height) {
-	@include font($size, $line-height); 
-}
-
-
-$xxxx_large_em_scale: #{$xxxx_large_point_size / $em};
-@mixin xxxx_large ($size: 1em, $line-height: $line_height) {
-	@include font(#{$xxxx_large_em_scale}em); //22px spec
-	
-}
+// $x_large_em: #{$x_large_point_size / $em}em;
+// @mixin x_large ($size: $x_large_em, $line-height: $line_height) {
+// 	@include font($size, $line-height); 
+// }
+// 
+// 
+// $xx_large_em: #{$xx_large_point_size / $em}em;
+// @mixin xx_large ($size: $xx_large_em, $line-height: $line_height) {
+// 	@include font($size, $line-height); 
+// }
+// 
+// 
+// $xxx_large_em: #{$xxx_large_point_size / $em}em;
+// @mixin xxx_large ($size: $xxx_large_em, $line-height: $line_height) {
+// 	@include font($size, $line-height); 
+// }
+// 
+// 
+// $xxxx_large_em_scale: #{$xxxx_large_point_size / $em};
+// @mixin xxxx_large ($size: 1em, $line-height: $line_height) {
+// 	@include font(#{$xxxx_large_em_scale}em); //22px spec
+// 	
+// }
 
 
 //////// standard text mixins //////////

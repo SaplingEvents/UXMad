@@ -5,9 +5,9 @@
 // --------------------------------------------------------------------
 button, a.button {
 	@include primary_button;
-	&:nth-child(n+2) {
-		@include secondary_button_core;	
-	}
+	//&:nth-child(n+2) {
+	//	@include secondary_button_core;	
+	//}
 }
 
 

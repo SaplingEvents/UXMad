@@ -1,3 +1,6 @@
+// --------------- google fonts ----------------- //
+@import url(http://fonts.googleapis.com/css?family=Puritan:400,700|Lato:400,700,900);
+
 // ------------ core app imports ------------ //
 // _imports is the aggregate file of all Axle methods //
 @import "imports/_imports.scss";
@@ -29,10 +32,10 @@
 
 // ------------ widget styles --------------- //
 // _widgets is the aggregate file of all site assembly widget SCSS //
-@import "imports/widgets/_widgets";
+//@import "imports/widgets/_widgets";
 
 
 /// ------------ Temp style adjust for Foresee survey ------------ ///
-@import "imports/buttons/foresee_fix";
+//@import "imports/buttons/foresee_fix";
 
 

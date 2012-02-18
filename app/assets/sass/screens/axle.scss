@@ -219,7 +219,7 @@ body {
 			position: absolute;
 			top: 0px;
 			left: 35px;
-			@include x_large;
+			//@include x_large;
 			padding: 60px 100px 100px 100px;
 			letter-spacing: 4px;
 			@media screen and (min-width: 1400px) {
@@ -387,7 +387,7 @@ body {
 	
 	.grid_960 {
 		background: url(#{$imgDir}12_col.gif) repeat-y ;
-		width: #{960 / $em}em;
+		width: #{960 / $em}rem;
 		@include clearfix;
 		text-align: center;
 		margin: 10px 0;

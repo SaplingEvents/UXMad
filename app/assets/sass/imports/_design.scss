@@ -24,7 +24,7 @@ $not_set: #00FF00;
 // http://www.csgnetwork.com/hexaddsubcalc.html is your best friend
 // suggest workflow, take each RGB value from the hex individually and do the math
 
-$alpha_grey: #000;
+$alpha_grey: #231f20;
 $bravo_grey: scale-color($alpha_grey, $lightness: 20%);
 $charlie_grey: scale-color($alpha_grey, $lightness: 30%);
 $delta_grey: scale-color($alpha_grey, $lightness: 40%);
@@ -39,10 +39,10 @@ $juliet_grey: scale-color($alpha_grey, $lightness: 100%);
 
 /////// OOCSS generic color blocks ////////
 // ----------------------------------------------
-$alpha_primary: #ec0036;    // red
-$bravo_primary: #59705d;    // green
-$charlie_primary: #a2ad00;    // yellow
-$delta_primary: #256ab1;    // blue
+$alpha_primary: #e31e25;    // red
+$bravo_primary: #34b501;    // green
+$charlie_primary: #f4ec1f;    // yellow
+$delta_primary: #00acdc;    // blue
 $echo_primary: #fc6432;     // accent
 
 $alpha_color: $alpha_primary;
@@ -228,7 +228,7 @@ $shadow_color: fade-out($alpha_grey, 0.5);
 $primary_header_color: $alpha_grey;
 
 // primary font color for the app
-$primary_text: $bravo_grey;
+$primary_text: $alpha_grey;
 
 // default <a href="#"> link color
 $href_color: $delta_color;
@@ -253,10 +253,10 @@ $selection_text_color: $primary_text;
 $border_color: $charlie_grey;
 
 // form colors
-$form_field_background_color: $white;
-$form_field_border: $echo_grey;
+$form_field_background_color: $india_grey;
+$form_field_border: $india_grey;
 $form_field_text: $primary_text;
-$form_field_focus_border_color: $delta_color_charlie;
+$form_field_focus_border_color: $delta_color;
 $form_field_focus_color: $white;
 
 $form_field_fail: $alpha_color;

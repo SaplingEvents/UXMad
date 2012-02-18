@@ -60,9 +60,9 @@
 		@include primary_button_active;
 	}
 		
-	&[disabled] {
-		@include disabled_button;
-	}
+	//&[disabled] {
+	//	@include disabled_button;
+	//}
 }
 
 
