@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'PointersRegular';
+  src: url("/fonts/pointers-webfont.eot");
+  src: url("/fonts/pointers-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/pointers-webfont.woff") format("woff"), url("/fonts/pointers-webfont.ttf") format("truetype"), url("/fonts/pointers-webfont.svg#PointersRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 /* Gradient color objects */
 /* ----------------------- */
 .alpha_color_gradient, .primary_button_color {
