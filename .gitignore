@@ -12,9 +12,5 @@ database.yml
 #don't need to track sass cache
 .sass-cache/
 
-#db was not tracked prior, not tracking now
-db/med2.sql
-
-
 #will update this later so that all css is ignored, only want to track sass files
 public/stylesheets/core.css
