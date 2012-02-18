@@ -4,9 +4,25 @@
   <title>UXMad</title>
 </head>
 <body>
-
-<%= yield %>
-
+	<section>
+		<header>
+			<nav>
+				<ol>
+					<li><%= link_to_unless_current "Home", :action => "show" %></li>
+					<li><%= link_to_unless_current "speakers", :action => "speakers" %></li>
+					<li><%= link_to_unless_current "schedule", :action => "schedule" %></li>
+					<li><%= link_to_unless_current "sponsors", :action => "sponsors" %></li>
+					<li><%= link_to_unless_current "travel", :action => "travel" %></li>
+					<li><%= link_to_unless_current "register", :action => "register" %></li>
+					<li><%= link_to_unless_current "about", :action => "about" %></li>
+					<li><%= link_to_unless_current "contact", :action => "contact" %></li>
+				</ol>
+			</nav>
+		</header>
+		
+		<%= yield %>
+		
+	</section>
 </body>
 </html>
 

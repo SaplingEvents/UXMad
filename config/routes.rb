@@ -2,6 +2,14 @@ Med2::Application.routes.draw do
 
   
 
+  get "/speakers" => "home#speakers"
+  get "/schedule" => "home#schedule"
+  get "/sponsors" => "home#sponsors"
+  get "/travel" => "home#travel"
+  get "/register" => "home#register"
+  get "/about" => "home#about"
+  get "/contact" => "home#contact"
+
   get "/axle" => "axle#grids"
   get "/axle/text" => "axle#text"
   get "/axle/abstract_colors" => "axle#abstract_colors"
@@ -13,7 +21,7 @@ Med2::Application.routes.draw do
   get "/axle/widgets/srp_header" => "axle#widgets_srpheader"
 
   
-  root :to => "axle#grids"
+  root :to => "home#show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
