@@ -1,0 +1,33 @@
+.three_col_text_block {
+    ul {
+    	@extend .grid_12_9;
+    	@extend .alpha;
+    	@extend .omega;
+    }
+    li {
+    	@extend .grid_12_3;
+    	&:first-child {
+    		@extend .alpha;
+    	}
+    	&:last-child {
+    		@extend .omega;
+    	}
+    }
+    p {
+    	margin: 0;
+    }
+	h3 {
+		@extend .headings_3_lubalin;
+		.ie7 & {
+			width: 100%;
+		}
+	}
+    @extend .clearfix;
+    float: left;
+    @extend .standard_hr;
+	&:last-child {
+		border-width: 0;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+}

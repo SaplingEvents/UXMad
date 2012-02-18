@@ -1,4 +1,17 @@
 UXMad::Application.routes.draw do
+
+  root :to => "axle#grids"
+  
+  get "/axle" => "axle#grids"
+  get "/axle/text" => "axle#text"
+  get "/axle/abstract_colors" => "axle#abstract_colors"
+  get "/axle/semantic_colors" => "axle#semantic_colors"
+  get "/axle/widgets" => "axle#widgets"
+  get "/axle/forms" => "axle#forms"
+  get "/axle/buttons" => "axle#buttons"
+  
+  get "/axle/widgets/srp_header" => "axle#widgets_srpheader"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

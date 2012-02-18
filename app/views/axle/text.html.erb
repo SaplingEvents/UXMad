@@ -1,0 +1,72 @@
+<header class="axle_main_header">| Axle | 'text'</header>
+<section class="axle_body">
+	<div class="axle_instructions">
+		<header class="axle_header">
+			<p>1. Heading Text</p>
+			<p>Font styles are not exclusive to heading tags. SASS mixins are applied to the illustrated tags by default.  Please apply the appropriate extend to redefine the heading tag to accommodate style and SEO.</p>
+		</header>
+		<article class="axle_representation">
+			<h1>.headings_1; Lorem ipsum dolor sit amet</h1>
+			<h2>.headings_2; Lorem ipsum dolor sit amet malesuada</h2>
+			<h3>.headings_3; Lorem ipsum dolor sit amet malesuada</h3>
+			<h4>.headings_4; Lorem ipsum dolor sit amet malesuada adipiscing</h4>
+		</article>
+		<article class="axle_instructions">
+			<p><b>Semantic OOCSS @extend Example:</b></p>
+			<pre class="prettyprint">
+h1 {
+  @extend .headings_1;
+}
+h2 {
+  @extend .headings_2;
+}
+h3 {
+  @extend .headings_3;
+}
+h4 {
+  @extend .headings_4;
+}			
+			</pre>
+		</article>
+		
+		<header class="axle_header">
+			<p>2. body text</p>
+			<p>Font styles are based on <code>em</code> scales, see <a href="http://www.alistapart.com/articles/howtosizetextincss/">How to Size Text in CSS</a>.  Setting the 'medium' or base font size for the application on the <code>body</code> tag sets the app precedence.</p> 
+			<p>At the appropriate block level apply the SCSS extend to the semantically named class in your design SCSS.  </p>
+		</header>
+		<article class="body_text">
+			<p class="small">@extend .small; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor diam, condimentum gravida ultricies non, sollicitudin eget nunc.</p>
+			<p class="medium">@extend .medium; (default site style)</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor diam, condimentum gravida ultricies non, sollicitudin eget nunc.</p>
+			<p class="large">@extend .large; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor diam, condimentum gravida ultricies non, sollicitudin eget nunc.</p>
+		</article>
+		<article class="axle_instructions">
+			<p><b>Semantic SCSS Example:</b></p>
+			<pre class="prettyprint">
+.semantic_block_element {
+  @extend .grid_12_7; 
+  p {
+    @extend .large;  // this will adjust the text size and not alter the overall width of the parent block
+  }
+}
+			</pre>
+		</article>
+		
+		<article class="axle_body">
+		<header class="axle_header">
+			<p>3. href text</p>
+			<article>
+				<p>Using standard <code>&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;</code> default styled are applied.</p>
+			</article>
+		</header>
+		<article class="body_text">
+			<p>This is text <a href="#">with a link</a> in it.</p>
+		</article>
+		<article class="axle_instructions">
+			<p><b>HTML Example:</b></p>
+			<pre class="prettyprint">
+&lt;p&gt;This is text &lt;a href=&quot;#&quot;&gt;with a link&lt;/a&gt; in it.&lt;/p&gt;			
+			</pre>
+		</article>
+	</article>
+	</div>
+</section>

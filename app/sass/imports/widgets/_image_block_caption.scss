@@ -1,0 +1,65 @@
+/// ///// Styles for Three column image block w/title and caption
+/// // ----------------------------------------------------------
+@mixin image_block_caption {
+	@include grid(12,9);
+	@include omega;
+	@include alpha;
+	@include clearfix;
+	> h2 {
+		@include heading($font_size: $heading_4, $family: lubalin);
+	}
+	ul > li {
+		@include grid(12,3);
+		&:first-child {
+			@include alpha;
+		}
+		&:last-child {
+			@include omega;
+		}
+	}
+	.image, .title, .caption {
+		@include grid(12,3);
+		@include alpha;
+		@include omega;
+	}
+	
+	.title {
+		height: 30px;
+		background: $alpha_grey;
+		h2 {
+			@include medium ($line-height: 30px);
+			margin: 0;
+			color: $white;
+			padding: 0 0 0 10px;
+		}
+	}
+	.caption {
+		@include linear_gradient_legacy_safari (#{color-stop(0%,$delta_grey), color-stop(100%,fade-out($white, 1))});
+		@include linear_gradient_w3c ($fox_grey, #{$delta_grey 0%, fade-out($white, 1) 100%});
+		@include linear_gradient_legacy_ie ($white, $white);
+		.msie8 & {
+			min-height: 150px;
+		}
+		p {
+			padding: 0 10px;
+			&:first-child {
+				padding-top: 10px;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	//@include clearfix;
+	@include standard_hr;
+	&:last-child {
+		border-width: 0;
+	}
+	
+}
+/// ///// Styles for Three column image block w/title and caption
+
+
+.image_block_captions {
+	@include image_block_caption;
+}

@@ -1,0 +1,34 @@
+<nav class="styleguide_nav">
+	<p><%= link_to_unless_current "Axle Grid", axle_path %></p>
+	<p><%= link_to_unless_current "Text", :action => "text" %></p>
+	<p><%= link_to_unless_current "Form", :action => "forms" %></p>
+	<p><%= link_to_unless_current "Abstract colors", :action => "abstract_colors" %></p>
+	<p><%= link_to_unless_current "Semantic colors", :action => "semantic_colors" %></p>
+	<p><%= link_to_unless_current "Buttons", :action => "buttons" %></p>
+	<p><%= link_to_unless_current "SRP Header", :action => "widgets_srpheader" %></p>
+	
+	<%#
+	<p><a href="/axle/text.php">Text</a></p>
+	<p><a href="/axle/color_generic.php">Abstract colors</a></p>
+	<p><a href="/axle/widgets/self_select_panel.php">Widgets</a></p>
+	
+	<ul class="widget_links">
+		<li><a href="/axle/widgets/three_col_text_block.php">3 col text block</a></li>
+		<li><a href="/axle/widgets/daylife_gallery.php">Daylife gallery</a></li>
+		<li><a href="/axle/widgets/editors_picks.php">Editors picks</a></li>
+		<li><a href="/axle/widgets/hgroup.php">Hgroup</a></li>
+		<li><a href="/axle/widgets/image_block_caption.php">Image block w/caption</a></li>
+		<li><a href="/axle/widgets/info_panel.php">Info panels</a></li>
+		<li><a href="/axle/widgets/merchandising.php">Merchandising</a></li>
+		<li><a href="/axle/widgets/narrative_element.php">Narrative element</a></li>
+		<li><a href="/axle/widgets/self_select_panel.php">Self select panel</a></li>
+		<li><a href="/axle/widgets/standard_copy_block.php">Standard copy block</a></li>
+		<li><a href="/axle/widgets/standard_search.php">Standard search</a></li>
+	</ul>
+	
+	<p><a href="/axle/form.php">Forms</a></p>
+	<p><a href="/axle/buttons.php">Buttons</a></p>
+	 %>
+	
+	<div class="nav_title" ontouchmove="touchMove(event)" ontouchstart="touchStart(event)">navigation</div>
+</nav>
