@@ -1,3 +1,0 @@
-$('#id1').html("<%= j @mychar %>");
-$('#id2').html("<%= j $mychars %>");
-$('#id3').html("<%= escape_javascript(render :partial => 'patients/result', :collection => $results)%>");
