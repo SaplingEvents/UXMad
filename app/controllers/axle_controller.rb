@@ -14,6 +14,9 @@ class AxleController < ApplicationController
   def semantic_colors
   end
   
+  def widgets
+  end
+  
   def forms
   end
   

@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-UXMad::Application.config.secret_token = '06a824a292b2c7c2a266b626daac95cd1a62c08be6cd40af52f3860c9afc33ec6318eed930df7b2629344ee4ae98206bed76eb2c62f55fcdb3e02e19703c5146'
+Med2::Application.config.secret_token = 'c2c24b6884a201e777476b0016698ee7c323e40facb6c7eec10aa453184dde6bc0867f0776bedb075fb67afe3f5d20c7ddd2095c50f27a398a0d4ede5ecb9196'

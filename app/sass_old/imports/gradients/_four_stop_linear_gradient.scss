@@ -1,0 +1,13 @@
+@mixin four_stop_linear_gradient ($start_color, $mid_color, $mid_1_color, $end_color, $prefixes: $prefix_defaults) {
+	// default fallback //
+	background: $start_color;
+	@each $prefix in $prefixes {
+		background: #{$prefix}linear-gradient(top, $start_color 0%, $mid_color 50%, $mid_1_color 50%, $end_color 100%);
+	}
+	// Safari 4.0 //
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start_color), color-stop(50%,$mid_color), color-stop(51%,$mid_1_color), color-stop(100%,$end_color));
+	// IE6 & 7 //
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#{$start_color}', endColorstr='#{$end_color}');
+	// IE8 & 9 //
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$start_color}', endColorstr='#{$end_color}')";
+}

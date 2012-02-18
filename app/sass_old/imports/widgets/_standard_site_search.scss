@@ -1,0 +1,13 @@
+.standard_search {
+	width: 100%;
+	float: left;
+	margin-bottom: #{8 / $em}em;
+	button {
+		float: left;
+	}
+	input[type="text"] {
+		@extend .grid_12_5;
+		@extend .alpha;
+		padding: #{5 / $em}em #{6 / $em}em;
+	}
+}

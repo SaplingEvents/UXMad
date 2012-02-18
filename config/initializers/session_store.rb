@@ -1,8 +1,8 @@
 # Be sure to restart your server when you modify this file.
 
-UXMad::Application.config.session_store :cookie_store, key: '_UXMad_session'
+Med2::Application.config.session_store :cookie_store, :key => '_med2_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rails generate session_migration")
-# UXMad::Application.config.session_store :active_record_store
+# Med2::Application.config.session_store :active_record_store

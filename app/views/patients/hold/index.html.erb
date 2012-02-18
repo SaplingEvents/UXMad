@@ -1,0 +1,123 @@
+<h1>Listing patients</h1>
+
+<table>
+  <tr>
+    <th>Prac no</th>
+    <th>Pat sid</th>
+    <th>Patient id</th>
+    <th>Pat ssn</th>
+    <th>Lname</th>
+    <th>Fname</th>
+    <th>Mname</th>
+    <th>Suff</th>
+    <th>Sex</th>
+    <th>Dob</th>
+    <th>Marr stat</th>
+    <th>Race</th>
+    <th>Language</th>
+    <th>Emp stat</th>
+    <th>Emp code</th>
+    <th>Addr1</th>
+    <th>Addr2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Courty</th>
+    <th>Patid2</th>
+    <th>Patid3</th>
+    <th>Patid4</th>
+    <th>Patid5</th>
+    <th>Chart</th>
+    <th>Email</th>
+    <th>Hph</th>
+    <th>Wph</th>
+    <th>Cph</th>
+    <th>Dr</th>
+    <th>Red dr</th>
+    <th>Release</th>
+    <th>Consent</th>
+    <th>Consent date</th>
+    <th>Last visit dt</th>
+    <th>Deceased</th>
+    <th>Death dt</th>
+    <th>Reg dt</th>
+    <th>Dx1</th>
+    <th>Dx2</th>
+    <th>Dx3</th>
+    <th>Dx4</th>
+    <th>Last statment dt</th>
+    <th>Last statment amt</th>
+    <th>Pat ethnicity</th>
+    <th>Pat class</th>
+    <th>Reserved1</th>
+    <th>Reserved2</th>
+    <th>Sortname</th>
+    <th>Customer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @patients.each do |patient| %>
+  <tr>
+    <td><%= patient.prac_no %></td>
+    <td><%= patient.pat_sid %></td>
+    <td><%= patient.patient_ID %></td>
+    <td><%= patient.pat_ssn %></td>
+    <td><%= patient.lname %></td>
+    <td><%= patient.fname %></td>
+    <td><%= patient.mname %></td>
+    <td><%= patient.suff %></td>
+    <td><%= patient.sex %></td>
+    <td><%= patient.dob %></td>
+    <td><%= patient.marr_stat %></td>
+    <td><%= patient.race %></td>
+    <td><%= patient.language %></td>
+    <td><%= patient.emp_stat %></td>
+    <td><%= patient.emp_code %></td>
+    <td><%= patient.addr1 %></td>
+    <td><%= patient.addr2 %></td>
+    <td><%= patient.city %></td>
+    <td><%= patient.state %></td>
+    <td><%= patient.zip %></td>
+    <td><%= patient.courty %></td>
+    <td><%= patient.patid2 %></td>
+    <td><%= patient.patid3 %></td>
+    <td><%= patient.patid4 %></td>
+    <td><%= patient.patid5 %></td>
+    <td><%= patient.chart_id %></td>
+    <td><%= patient.email %></td>
+    <td><%= patient.hph %></td>
+    <td><%= patient.wph %></td>
+    <td><%= patient.cph %></td>
+    <td><%= patient.dr %></td>
+    <td><%= patient.red_dr %></td>
+    <td><%= patient.release %></td>
+    <td><%= patient.consent %></td>
+    <td><%= patient.consent_date %></td>
+    <td><%= patient.last_visit_dt %></td>
+    <td><%= patient.deceased %></td>
+    <td><%= patient.death_dt %></td>
+    <td><%= patient.reg_dt %></td>
+    <td><%= patient.dx1 %></td>
+    <td><%= patient.dx2 %></td>
+    <td><%= patient.dx3 %></td>
+    <td><%= patient.dx4 %></td>
+    <td><%= patient.last_statment_dt %></td>
+    <td><%= patient.last_statment_amt %></td>
+    <td><%= patient.pat_ethnicity %></td>
+    <td><%= patient.pat_class %></td>
+    <td><%= patient.reserved1 %></td>
+    <td><%= patient.reserved2 %></td>
+    <td><%= patient.sortname %></td>
+    <td><%= patient.customer_id %></td>
+    <td><%= link_to 'Show', patient %></td>
+    <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
+    <td><%= link_to 'Destroy', patient, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Patient', new_patient_path %>
