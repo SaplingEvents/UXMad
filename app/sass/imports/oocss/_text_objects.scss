@@ -18,6 +18,10 @@
 	@include heading($font-size: $heading_3, $family: alpha, $font_weight: normal, $color: $delta_grey);
 }
 
+.headings_4 {
+	@include heading($font-size: $heading_4, $family: alpha, $font_weight: bold, $color: $primary_text);
+}
+
 .block_header_1 {
 	@include blockheader;
 }

@@ -275,6 +275,17 @@
   hgroup .headings_3 {
     margin-bottom: 0 !important; }
 
+.headings_4 {
+  font-size: 1.286em;
+  color: #52494b;
+  line-height: 1em;
+  font-weight: bold;
+  margin-bottom: 1.111em;
+  font-family: "Puritan", sans-serif;
+  letter-spacing: 0; }
+  hgroup .headings_4 {
+    margin-bottom: 0 !important; }
+
 .block_header_1 {
   font-size: 1.714rem;
   line-height: 4.857rem;
@@ -892,11 +903,11 @@ body {
   .styleguide .shadow_color {
     background-color: rgba(35, 31, 32, 0.5); }
   .styleguide .form_field_border {
-    background-color: #97898d; }
+    background-color: #eae7e8; }
   .styleguide .form_field_focus_border_color {
     background-color: #17ccff; }
   .styleguide .form_field_focus_color {
-    background-color: white; }
+    background-color: #f2f1f1; }
   .styleguide .form_field_text {
     background-color: #52494b; }
   .styleguide .form_field_text_fail {
@@ -908,7 +919,7 @@ body {
   .styleguide .input_disabled_bkg {
     background-color: white; }
   .styleguide .form_field_background_color {
-    background-color: white; }
+    background-color: #eae7e8; }
   .styleguide .input_disabled_border {
     background-color: #d0cacb; }
   .styleguide .input_disabled_text {

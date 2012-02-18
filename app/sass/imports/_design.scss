@@ -253,11 +253,12 @@ $selection_text_color: $primary_text;
 $border_color: $charlie_grey;
 
 // form colors
-$form_field_background_color: $white;
-$form_field_border: $echo_grey;
+$form_field_background_color: $india_grey;
+$form_field_border: $india_grey;
 $form_field_text: $primary_text;
 $form_field_focus_border_color: $delta_color_charlie;
-$form_field_focus_color: $white;
+$form_field_focus_color: scale-color($india_grey, $lightness: 40%);
+
 
 $form_field_fail: $alpha_color;
 $form_field_border_fail: $form_field_fail;

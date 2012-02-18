@@ -28,12 +28,11 @@ input[type=text], input[type=password], select {
 	border: 1px solid $form_field_border;
 	background: $form_field_background_color;
 	padding: 0 #{6 / $em}em;
-	@extend .large;
+	@extend .medium;
 	width: 98%;
 	@include border_radius(#{3 / $em}em);
-	//height: 40px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 
 	&:-moz-placeholder {
 		color: $delta_grey;
