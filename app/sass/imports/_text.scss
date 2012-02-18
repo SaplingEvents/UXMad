@@ -13,10 +13,10 @@ $font_size: 14;
 $legacy_font_size: 10;
 $em: $font_size;
 
-$heading_1: 46;
-$heading_2: 32;
-$heading_3: 28;
-$heading_4: 18;
+$heading_1: 36;
+$heading_2: 24;
+$heading_3: 22;
+//$heading_4: 18;
 
 //$xx_small_point_size: 6;
 //$x_small_point_size: 9;
@@ -30,24 +30,32 @@ $large_point_size: 16;
 $line: $font_size * 1.5;
 $line_height: #{$line / $em}em;
 
-$primary_font_family: #{Arial, sans-serif};
+$primary_font_family: #{'helvetica', sans-serif};
 @mixin primary_font_family {
 	font-family: $primary_font_family;
 }
 $secondary_font_family: #{Verdana, Arial, Helvetica, sans-serif};
+
 $heading_font_family: #{Arial, Helvetica, serif};
-//$webfont_alpha: #{'ITC Lubalin Graph', Arial, sans-serif};
+
+$googlefont_alpha: #{'Puritan', sans-serif};
+$googlefont_bravo: #{'Lato', sans-serif};
+//$webfont_alpha: #{ };
+$iconfont_alpha: #{'PointersRegular'};
 
 //////// heading text mixins //////////
 // ------------------------------------------------
-@mixin heading ($font_size: $heading_1, $family: default, $line_height: 1em, $color: $primary_header_color, $font_weight: normal, $letter_spacing: 0, $margin_bottom: 20) {
+@mixin heading ($font_size: $heading_1, $family: default, $line_height: 1em, $color: $primary_header_color, $font_weight: bold, $letter_spacing: 0, $margin_bottom: 20) {
 	font-size: #{$font_size / $em}em;
 	color: $color;
 	line-height: $line_height;
 	font-weight: $font_weight;
 	margin-bottom: #{$margin_bottom / $font_size}em;
-	@if $family == lubalin {
-		font-family: $heading_font_family;
+	@if $family == alpha {
+		font-family: $googlefont_alpha;
+	}
+	@else if $family == bravo {
+		font-family: $googlefont_bravo;
 	}
 	hgroup & {
 		margin-bottom: 0 !important;

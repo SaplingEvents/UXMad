@@ -24,7 +24,7 @@ $not_set: #00FF00;
 // http://www.csgnetwork.com/hexaddsubcalc.html is your best friend
 // suggest workflow, take each RGB value from the hex individually and do the math
 
-$alpha_grey: #000;
+$alpha_grey: #231f20;
 $bravo_grey: scale-color($alpha_grey, $lightness: 20%);
 $charlie_grey: scale-color($alpha_grey, $lightness: 30%);
 $delta_grey: scale-color($alpha_grey, $lightness: 40%);
@@ -39,11 +39,11 @@ $juliet_grey: scale-color($alpha_grey, $lightness: 100%);
 
 /////// OOCSS generic color blocks ////////
 // ----------------------------------------------
-$alpha_primary: #ec0036;    // red
+$alpha_primary: #e31e25;    // red
 $bravo_primary: #59705d;    // green
-$charlie_primary: #a2ad00;    // yellow
-$delta_primary: #256ab1;    // blue
-$echo_primary: #fc6432;     // accent
+$charlie_primary: #ece911;    // yellow
+$delta_primary: #00acdc;    // blue
+$echo_primary: #ff5323;     // accent
 
 $alpha_color: $alpha_primary;
 $alpha_color_bravo: scale-color($alpha_color, $lightness: 10%);
