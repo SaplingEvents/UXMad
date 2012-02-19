@@ -11,11 +11,17 @@
 // Include @silent feature when made avialable
 // https://github.com/chriseppstein/sass/commit/52c9084c1e1258473d00274fbf210d6c44ae14ad
 
-@import "oocss/gradients";
-@import "oocss/color_blocks";
+/* UXMad OOCSS Styles */
+/* ------------------ */
+
 @import "oocss/text_objects";
 @import "oocss/ui_objects";
-@import "oocss/semantic_color_blocks";
-@import "oocss/semantic_button_color_blocks";
-@import "oocss/rounded_corners";
-@import "oocss/grid";
+
+
+
+//@import "oocss/gradients";
+//@import "oocss/color_blocks";
+//@import "oocss/semantic_color_blocks";
+//@import "oocss/semantic_button_color_blocks";
+//@import "oocss/rounded_corners";
+//@import "oocss/grid";

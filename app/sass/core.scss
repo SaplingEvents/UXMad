@@ -2,8 +2,7 @@
 // _imports is the aggregate file of all Axle methods //
 @import "imports/_imports.scss";
 
-// font face import file //
-//@import "imports/font_libraries/_Lubalin.scss";
+
 
 // Common use reset CSS, updated with Axle references //
 @import "reset.scss";
@@ -22,17 +21,9 @@
 
 // ---------- Full screen styles ------------ //
 // Screen-view specific layout SCSS files //
-//@import "screens/_music";
-//@import "screens/_ehp";
-
 
 
 // ------------ widget styles --------------- //
 // _widgets is the aggregate file of all site assembly widget SCSS //
 @import "imports/widgets/_widgets";
-
-
-/// ------------ Temp style adjust for Foresee survey ------------ ///
-@import "imports/buttons/foresee_fix";
-
 

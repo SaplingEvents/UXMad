@@ -40,6 +40,7 @@ $heading_font_family: #{Arial, Helvetica, serif};
 
 $googlefont_alpha: #{'Puritan', sans-serif};
 $googlefont_bravo: #{'Lato', sans-serif};
+$googlefont_charlie: #{'Candal', sans-serif};
 //$webfont_alpha: #{ };
 $iconfont_alpha: #{'PointersRegular'};
 
@@ -66,6 +67,7 @@ $iconfont_alpha: #{'PointersRegular'};
 
 @mixin blockheader($background: $alpha_grey) {
 	font-size: #{$heading_2 / $em}rem;
+	font-family: $googlefont_charlie;
 	line-height: #{68 / $em}rem;
 	text-align: center;
 	background: $background;
