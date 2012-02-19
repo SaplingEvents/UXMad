@@ -15,7 +15,7 @@
 }
 
 .headings_3 {
-	@include heading($font-size: $heading_3, $family: alpha, $font_weight: normal, $color: $delta_grey);
+	@include heading($font-size: $heading_3, $family: alpha, $font_weight: bold, $color: $delta_grey, $line_height: 1.5em);
 }
 
 .headings_4 {

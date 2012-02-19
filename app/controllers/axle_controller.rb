@@ -22,5 +22,8 @@ class AxleController < ApplicationController
   
   def buttons
   end
+  
+  def widgets_site_header
+  end
 
 end

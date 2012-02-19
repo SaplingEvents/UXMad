@@ -1,106 +1,12 @@
 ///////// global //////////
 
-
-
-
-//////////// majority of code here is to undo what is being inherited from legacy CSS files ////////////
-.content_wrap {
-	width: #{940 / $em}em;
-	float: none;
-}
-
-nav, .main_content {
-	float: left;
-}
-
-.main_content {
-	@extend .grid_12_9;
-	@extend .omega;
-}
-
-#globalHeader {
-	width: #{940 / $em}em;
-}
-
-.quicksearch {
-	float: left; 
-	width: 100%;
-	padding: 0;
-	margin: 0 0 #{30 / $em}em 0;
-}
-
-.toolbar {
-	width: #{940 / $em}em;
-	@extend .standard_block_spacing;
-	margin-bottom: #{20 / $em}em !important;
-}
-
-#globalFooter {
-	min-height: #{50 / $em}em;
-	width: 100%;
-	@extend .secondary_font_family;
-	font-size: 10px;
-	h6 {
-		@extend .secondary_font_family;
-	}
-	#internationalFooter {
-		font-size: 10px;
-		@extend .secondary_font_family;
+.container {
+	width: #{960 / $em}rem;
+	margin: 0 auto;
+	
+	header {
+		@extend .clearfix;
+		margin-top: #{70 / $em}rem;
+		margin-bottom: #{100 / $em}rem;
 	}
 }
-
-#globalFooterDivider {
-	float: left;
-	width: 100%;
-}
-
-.getty_search_subhead_over-write {
-	margin-bottom: 0;
-	padding: 0;
-}
-
-//////////// majority of code here is to undo what is being inherited from legacy CSS files ////////////
-
-
-
-//////////// only for the display of the grid in the screen assembly //////////
-// .inner_widget {
-// 	background-position: -10px 0 !important;
-// }
-// 
-// .grid_12_col_background {
-// 	background: url(#{$imgDir}12_col.gif);
-// 	margin-bottom: 20px;
-// 	float: left;	
-// }
-// 
-// .grid_12_col_background_shift {
-// 	@extend .grid_12_col_background;	
-// 	@extend .inner_widget;
-// }
-//////////// only for the display of the grid in the screen assembly //////////
-
-
-
-.two_column_info_pannels {
-	@extend .standard_block_spacing;
-}
-
-
-@mixin panel_header {
-	@extend .large;
-	color: $white;
-	@media print {
-		color: $alpha_grey;
-	}
-	background: $bravo_grey;
-	line-height: 2.5em;
-	font-weight: bold;
-	text-indent: #{10 / $em}em;
-	@include border_radius(#{4 / $large_point_size}em);
-}
-
-.panel_headers {
-	@include panel_header;
-}
-

@@ -1,6 +1,14 @@
 UXMad::Application.routes.draw do
 
-  root :to => "axle#grids"
+  get "/speakers" => 'home#speakers'
+  get "/schedule" => 'home#schedule'
+  get "/sponsors" => 'home#sponsors'
+  get "/travel" => 'home#travel'
+  get "/register" => 'home#register'
+  get "/about" => 'home#about'
+  get "/contact" => 'home#contact'
+  
+  root :to => "home#home"
   
   get "/axle" => "axle#grids"
   get "/axle/text" => "axle#text"
@@ -10,7 +18,7 @@ UXMad::Application.routes.draw do
   get "/axle/forms" => "axle#forms"
   get "/axle/buttons" => "axle#buttons"
   
-  get "/axle/widgets/srp_header" => "axle#widgets_srpheader"
+  get "/axle/widgets_site_header" => "axle#widgets_site_header"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
