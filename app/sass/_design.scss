@@ -1,12 +1,50 @@
 ///////// global //////////
 
+body {
+	background: url(#{$imgDir}bkg_grid.png) repeat-x, scale-color($echo_grey, $lightness: 90%);
+	
+}
+
 .container {
 	width: #{960 / $em}rem;
 	margin: 0 auto;
 	
-	header {
+	
+	
+	@extend .clearfix;
+	
+	> header {
 		@extend .clearfix;
-		margin-top: #{70 / $em}rem;
-		margin-bottom: #{100 / $em}rem;
+		padding-top: #{70 / $em}rem;
+		padding-bottom: #{100 / $em}rem;
+		background: $white;
 	}
 }
+
+.sub-container {
+	@extend .clearfix;
+	background: scale-color($echo_grey, $lightness: 90%);
+}
+
+.column {
+	@include grid(12,4,percent);
+}
+
+.column_alpha {
+	@extend .column;
+	@include alpha;
+}
+
+.column_bravo {
+	@extend .column;
+	@include grid(12,4.25,percent);
+	margin-top: -20px;
+}
+
+.column_charlie {
+	@extend .column;
+	@include omega;
+}
+
+
+                  

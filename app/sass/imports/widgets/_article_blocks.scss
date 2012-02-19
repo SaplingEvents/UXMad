@@ -1,6 +1,7 @@
 @mixin article_blocks($header:alpha) {
 	margin-bottom: #{10 / $em}rem;
 	padding-bottom: #{20 / $em}rem;
+	background: $white;
 	section {
 		padding: 0 #{25 / $em}rem;
 	}

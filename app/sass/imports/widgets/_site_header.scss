@@ -1,7 +1,7 @@
 .site_header {
 	@extend .clearfix;
-	height: #{160 / $em}rem;
-	background: url(#{$imgDir}uxmad_logo.png) no-repeat 50% 50%;
+	height: #{165 / $em}rem;
+	background: url(#{$imgDir}uxmad_logo.png) no-repeat 50% 10%;
 	@include grid(12,12,percent);
 	nav {
 		@include grid(12,3,percent);
@@ -38,7 +38,7 @@
 
 .site_hgroup {
 	@include grid(12,12,percent);
-	margin-top: #{70 / $em}rem;
+	margin-top: #{90 / $em}rem;
 	text-align: center;
 	p {
 		@extend .headings_1;
