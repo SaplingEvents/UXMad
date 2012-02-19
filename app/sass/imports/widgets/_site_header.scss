@@ -8,6 +8,7 @@
 		@include alpha;
 		@include prefix(12,1,percent);
 		@extend .headings_4;
+		color: $alpha_color;
 		a {
 			text-decoration: none;
 			color: $alpha_grey;

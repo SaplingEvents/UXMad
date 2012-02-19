@@ -19,6 +19,7 @@ UXMad::Application.routes.draw do
   get "/axle/buttons" => "axle#buttons"
   
   get "/axle/widgets_site_header" => "axle#widgets_site_header"
+  get "/axle/widgets_home_blocks" => "axle#widgets_home_blocks"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

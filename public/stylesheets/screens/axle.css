@@ -292,7 +292,7 @@
   text-align: center;
   background: #231f20;
   color: white;
-  font-weight: bolder; }
+  font-weight: 900; }
 
 .block_header_2 {
   font-size: 1.714rem;
@@ -300,7 +300,7 @@
   text-align: center;
   background: #e31e25;
   color: white;
-  font-weight: bolder; }
+  font-weight: 900; }
 
 .block_header_3 {
   font-size: 1.714rem;
@@ -308,7 +308,7 @@
   text-align: center;
   background: #00acdc;
   color: white;
-  font-weight: bolder; }
+  font-weight: 900; }
 
 .small {
   font-size: 0.857em;
@@ -784,6 +784,8 @@ body {
     -ms-transition: all 0.5s ease-in-out 0s;
     transition: all 0.5s ease-in-out 0s;
     background-color: #fff; }
+    .styleguide .styleguide_nav a {
+      text-decoration: none; }
     @media screen and (min-width: 1400px) {
       .styleguide .styleguide_nav {
         left: 30px; } }

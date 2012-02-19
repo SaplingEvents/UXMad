@@ -195,6 +195,10 @@ body {
 	
  	.styleguide_nav {
 		position: fixed;
+		a {
+			text-decoration: none;
+		}
+		
 		z-index: 1000;
 		border: 1px solid #ccc;
 		left: -157px;
