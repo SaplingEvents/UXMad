@@ -1,4 +1,4 @@
-@mixin article_blocks($header:alpha) {
+.content_block_alpha {
 	margin-bottom: #{10 / $em}rem;
 	padding-bottom: #{20 / $em}rem;
 	background: $white;
@@ -38,15 +38,7 @@
 	header {
 		h1 {
 			text-transform: uppercase;
-			@if $header == alpha {
-				@extend .block_header_1;
-			}
-			@else if $header == bravo {
-				@extend .block_header_2;
-			}
-			@else if $header == charlie {
-				@extend .block_header_3;
-			}
+			@extend .block_header_1;
 		}	
 	}
 	h2 {
@@ -56,14 +48,20 @@
 	border: 1px solid $india_grey;
 } 
 
-.content_block_alpha {
-	@include article_blocks;
-}
-
 .content_block_bravo {
-	@include article_blocks(bravo);
+	@extend .content_block_alpha;
+	header {
+		h1 {
+			@extend .block_header_2;
+		}
+	}
 }
 
 .content_block_charlie {
-	@include article_blocks(charlie);
+	@extend .content_block_alpha;
+	header {
+		h1 {
+			@extend .block_header_3;
+		}
+	}
 }
