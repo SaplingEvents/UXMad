@@ -28,15 +28,10 @@
 // This is your button //
 // ---------------------------------------//
 @mixin primary_button ($font_size: large) {
-	@extend .primary_button_color;  //OOCSS extends mixin from line 9
-	@extend .primary_button_border; //OOCSS extends mixin from line 21
+	font-family: $iconfont_alpha;
 	padding: 0 #{10 / $em}em;
 	line-height: #{30 / $em}em;
-	@include border_radius(#{3 / $em}em);
 	color: $button_text;
-	a & {
-		text-decoration: none;
-	}
 	@if $font_size == medium {
 		@extend .medium;
 	}
@@ -53,15 +48,8 @@
 	}
 
 	&:hover {
-		@include primary_button_hover;
-	}
-		
-	&:active {
-		@include primary_button_active;
-	}
-		
-	&[disabled] {
-		@include disabled_button;
+		//@include primary_button_hover;
+		text-decoration: underline;
 	}
 }
 

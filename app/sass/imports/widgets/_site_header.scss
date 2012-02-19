@@ -50,11 +50,3 @@
 		}
 	}
 }
-
-.designer_hr {
-	border: 1px solid;
-	@include grid(12,6,percent);
-	@include push(12,3,percent);
-	border-bottom-color: $golf_grey;
-	border-top-color: $india_grey;
-}

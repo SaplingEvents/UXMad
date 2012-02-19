@@ -347,8 +347,7 @@
 /* icon fonts alpha */
 .iconfont_alpha {
   font-family: PointersRegular;
-  font-size: 1.571rem;
-  letter-spacing: 10px; }
+  font-size: 1.571rem; }
 
 /* standard content block styling */
 /* ------------------------------ */
@@ -901,7 +900,7 @@ body {
   .styleguide .error_text {
     background-color: #e31e25; }
   .styleguide .button_text {
-    background-color: white; }
+    background-color: #00acdc; }
   .styleguide .shadow_color {
     background-color: rgba(35, 31, 32, 0.5); }
   .styleguide .form_field_border {

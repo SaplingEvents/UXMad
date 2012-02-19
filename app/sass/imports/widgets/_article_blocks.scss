@@ -5,6 +5,36 @@
 	section {
 		padding: 0 #{25 / $em}rem;
 	}
+	img {
+		width: #{80 / $em}rem;
+		height: #{125 / $em}rem;
+		float: left;
+		padding-right: #{30 / $em}rem;
+		padding-bottom: #{10 / $em}rem;
+	}
+	.speaker_block {
+		@include grid(12,12,percent);
+		a {
+			display: block;
+			color: $href_color_alt;
+		}
+	}
+	.link_carousel {
+		text-align: center;
+		a, p {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+		a {
+			@extend .iconfont_alpha;
+			text-decoration: none;
+			@include medium;
+			padding: 0 #{10 / $em}rem;
+		}
+		&+p {
+			text-align: center;
+		}
+	}
 	header {
 		h1 {
 			text-transform: uppercase;

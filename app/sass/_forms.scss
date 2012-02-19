@@ -5,9 +5,6 @@
 // --------------------------------------------------------------------
 button, a.button {
 	@include primary_button;
-	&:nth-child(n+2) {
-		@include secondary_button_core;	
-	}
 }
 
 
@@ -24,12 +21,12 @@ a.button {
 //////// inputs ////////
 // ---------------------
 
-input[type=text], input[type=password], select {
+input[type=text], input[type=email], input[type=password], select, textarea {
 	border: 1px solid $form_field_border;
 	background: $form_field_background_color;
 	padding: 0 #{6 / $em}em;
 	@extend .medium;
-	width: 98%;
+	width: 95%;
 	@include border_radius(#{3 / $em}em);
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -50,6 +47,10 @@ select {
 	.webkit & {
 		height: #{43 / $em}rem;	
 	}
+}
+
+textarea {
+	height: #{100 / $em}rem;
 }
 
 // textarea {
