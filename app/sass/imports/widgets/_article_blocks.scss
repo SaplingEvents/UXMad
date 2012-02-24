@@ -28,8 +28,11 @@
 		a {
 			@extend .iconfont_alpha;
 			text-decoration: none;
-			@include medium;
+			@include small;
 			padding: 0 #{10 / $em}rem;
+			&:hover {
+				color: $alpha_color;
+			}
 		}
 		&+p {
 			text-align: center;

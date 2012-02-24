@@ -31,8 +31,10 @@ body {
 
 .column {
 	@include grid(12,4,percent);
-	button {
-		@include push(12,10,percent);
+	form {
+		button {
+			@include push(12,10,percent);
+		}
 	}
 }
 

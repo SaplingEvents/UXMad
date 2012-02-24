@@ -27,9 +27,9 @@
 
 // This is your button //
 // ---------------------------------------//
-@mixin primary_button ($font_size: large) {
+@mixin primary_button ($font_size: small) {
 	font-family: $iconfont_alpha;
-	padding: 0 #{10 / $em}em;
+	padding: 0 #{10 / $em}em #{10 / $em}em 0;
 	line-height: #{30 / $em}em;
 	color: $button_text;
 	@if $font_size == medium {
@@ -38,18 +38,24 @@
 	@else if $font_size == large {
 		@extend .large;
 	}
+	@else if $font_size == small {
+		@extend .small;
+	}
 	font-weight: bold;
+	
+	min-width: #{40 / $em}em;
 	
 	width: auto;
 	margin-right: 1em;
-		
+
 	&:last-child {
 		margin-right: 0;
 	}
 
 	&:hover {
 		//@include primary_button_hover;
-		text-decoration: underline;
+		//text-decoration: underline;
+		color: $alpha_color;
 	}
 }
 
