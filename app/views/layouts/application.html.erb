@@ -5,11 +5,11 @@
   <%= favicon_link_tag %>
 	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 	
-	<script src="http://code.jquery.com/jquery-1.6.1.js"></script>		<!-- v1.6.1 May 12 2011 -->
+  <%= stylesheet_link_tag "core" %>
+  <%= javascript_include_tag "application" %>
 	<%= javascript_include_tag 'modernizr-1.7.min.js' %>
 	<%= javascript_include_tag 'selectivizr-min.js' %>
 	<%= javascript_include_tag 'css_browser_selector.js' %>
-	<%= stylesheet_link_tag 'core.css' %>
 	<%= csrf_meta_tag %>
 </head>
 <body>
