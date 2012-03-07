@@ -15,6 +15,7 @@ test:
   username:
   pool: 5
 
+# Heroku rewrites this in prod, do not change:
 production:
   adapter: postgresql
   encoding: unicode
