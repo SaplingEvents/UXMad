@@ -27,8 +27,8 @@
 
 // This is your button //
 // ---------------------------------------//
-@mixin primary_button ($font_size: small) {
-	font-family: $iconfont_alpha;
+@mixin primary_button ($font_size: large) {
+	font-family: $googlefont_alpha;
 	padding: 0 #{10 / $em}em #{10 / $em}em 0;
 	line-height: #{30 / $em}em;
 	color: $button_text;
