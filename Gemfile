@@ -22,6 +22,13 @@ gem 'jquery-rails'
 # gem 'jbuilder'
 
 group :development, :test do
+  gem 'pry'
+  gem 'pry-doc'
   # To use debugger
   # gem 'ruby-debug19', :require => 'ruby-debug'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'cucumber-rails'
 end
