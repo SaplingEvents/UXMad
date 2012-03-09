@@ -14,10 +14,14 @@
 	}
 	.speaker_block {
 		@include grid(12,12,percent);
+                float:none !important;
 		a {
 			display: block;
 			color: $href_color_alt;
 		}
+                p {
+                    margin-top: 20px;
+                }
 	}
 	.link_carousel {
 		text-align: center;
