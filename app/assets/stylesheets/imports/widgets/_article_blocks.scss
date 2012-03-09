@@ -39,11 +39,11 @@
                         display: inline-block;
                         margin-bottom: 0;
                 }
-                a {
+                a, button {
                         @extend .iconfont_alpha;
                         text-decoration: none;
                         @include small;
-                        padding: 0 #{10 / $em}rem;
+                        // padding: 0 #{10 / $em}rem;
                         &:hover {
                                 color: $alpha_color;
                         }
