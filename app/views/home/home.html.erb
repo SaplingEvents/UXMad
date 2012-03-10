@@ -144,6 +144,9 @@
           </header>
           <section>
           <h2>Buy your ticket</h2>
+          <p>
+            Three days of mind-expanding content and top-shelf after-parties.
+          </p>
           <ul id="prices">
             <li>
               <strong>
@@ -167,7 +170,9 @@
               Conference Only
             </li>
           </ul>
-          <%= link_to "Register", register_path, :class => "button" %>
+          <%= link_to register_path, :class => "button", :id => "register_link" do %>
+            Register &raquo;
+          <% end %>
           </section>
           </article>
 
