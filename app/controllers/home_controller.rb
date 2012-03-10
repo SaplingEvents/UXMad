@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def home
+    @speakers = Speaker.all
   end
   
   def speakers

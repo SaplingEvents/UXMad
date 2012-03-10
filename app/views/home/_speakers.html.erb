@@ -4,32 +4,20 @@
 <section class="speakers">
 <div class="speaker_block">
   <ul class="cycle" id="speaker_cycle">
-    <li>
-      <h2>Andrew Maier</h2>
-      <%= image_tag 'img_homepage-andrew_maier.png' %>
-      <a href="http://twitter.com/andrewmaier">Twitter</a>
-      <a href="http://uxbooth.com">Website</a>
-      <p>Andrew Maier designs interactions and user experiences for a variety of clients having formerly worked with Hashrocket, a world-class web application consultancy. He writes, speaks, and teaches about design and its intersection with the internet. In addition he serves as the editor–in–chief of the user experience blog, UX Booth. When he's not crazy busy, Andrew likes singing, practicing yoga and drinking coffee.</p>
-    </li>
-    <li>
-      <h2>Andrew Maier 2</h2>
-      <%= image_tag 'img_homepage-andrew_maier.png' %>
-      <a href="http://twitter.com/andrewmaier">Twitter</a>
-      <a href="http://uxbooth.com">Website</a>
-      <p>Andrew Maier designs interactions and user experiences for a variety of clients having formerly worked with Hashrocket, a world-class web application consultancy. He writes, speaks, and teaches about design and its intersection with the internet. In addition he serves as the editor–in–chief of the user experience blog, UX Booth. When he's not crazy busy, Andrew likes singing, practicing yoga and drinking coffee.</p>
-    </li>
-    <li>
-      <h2>Andrew Maier 3</h2>
-      <%= image_tag 'img_homepage-andrew_maier.png' %>
-      <a href="http://twitter.com/andrewmaier">Twitter</a>
-      <a href="http://uxbooth.com">Website</a>
-      <p>Andrew Maier designs interactions and user experiences for a variety of clients having formerly worked with Hashrocket, a world-class web application consultancy. He writes, speaks, and teaches about design and its intersection with the internet. In addition he serves as the editor–in–chief of the user experience blog, UX Booth. When he's not crazy busy, Andrew likes singing, practicing yoga and drinking coffee.</p>
-    </li>
+    <% @speakers.each do |speaker| %>
+      <li>
+        <h2><%= speaker.name %></h2>
+        <%= image_tag speaker.image_path %>
+        <%= link_to "Website", speaker.website_url %>
+        <%= link_to "Twitter", speaker.twitter_username if speaker.twitter_username %>
+        <p><%= speaker.bio %></p>
+      </li>
+    <% end %>
   </ul>
 </div>
 <div class="link_carousel">
   <button class="prev iconfont_alpha">1</button>
-  <p>1 / 1</p>
+  <p><span id="current_speaker">1</span> / <%= @speakers.count %></p>
   <button class="next iconfont_alpha">2</button>
 </div>
 <p><a href="#">All</a></p>
