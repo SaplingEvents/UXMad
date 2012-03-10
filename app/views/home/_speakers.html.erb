@@ -9,7 +9,7 @@
         <h2><%= speaker.name %></h2>
         <%= image_tag speaker.image_path %>
         <%= link_to "Website", speaker.website_url %>
-        <%= link_to "Twitter", speaker.twitter_username if speaker.twitter_username %>
+        <%= link_to "Twitter", "http://www.twitter.com/" + speaker.twitter_username if speaker.twitter_username %>
         <p><%= speaker.bio %></p>
       </li>
     <% end %>
