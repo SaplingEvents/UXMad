@@ -1,11 +1,11 @@
 UXMad::Application.routes.draw do
-  get "/speakers" => 'home#speakers'
-  get "/schedule" => 'home#schedule'
-  get "/sponsors" => 'home#sponsors'
-  get "/travel" => 'home#travel'
+#  get "/speakers" => 'home#speakers'
+#  get "/schedule" => 'home#schedule'
+#  get "/sponsors" => 'home#sponsors'
+#  get "/travel" => 'home#travel'
   get "/register" => 'home#register'
-  get "/about" => 'home#about'
-  get "/contact" => 'home#contact'
+#  get "/about" => 'home#about'
+#  get "/contact" => 'home#contact'
 
   root :to => "home#home"
 
