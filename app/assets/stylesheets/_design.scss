@@ -5,14 +5,11 @@
 
 body {
 //  background: url(#{$imgDir}bkg_grid.png) repeat-x, scale-color($echo_grey, $lightness: 90%);
-  
 }
 
 .container {
   width: #{960 / $em}rem;
   margin: 0 auto;
-
-
 
   @extend .clearfix;
 
@@ -32,6 +29,9 @@ body {
 
 .column {
   @include grid(12,4,percent);
+  a.button {
+    @include push(12,8,percent);
+  }
   form {
     button {
       @include push(12,8,percent);
@@ -55,7 +55,12 @@ body {
   @include omega;
 }
 
-
+#prices {
+  margin-bottom: 1em;
+  li {
+    margin-bottom: 0.5em;
+  }
+}
 
 .designer_hr {
   border: 1px solid;
