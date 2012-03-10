@@ -1,4 +1,4 @@
-$ -> 
+$ ->
   $("#speaker_cycle").cycle(
     fx: "scrollHorz"
     height: 440
