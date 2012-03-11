@@ -1,7 +1,7 @@
 $ ->
   $("#speaker_cycle").cycle(
     fx: "scrollHorz"
-    height: 440
+    height: 460
     prev: ".prev"
     next: ".next"
     autoStop: true
