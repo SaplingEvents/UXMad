@@ -26,6 +26,8 @@ group :development, :test do
   gem 'pry-doc'
   # To use debugger
   # gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'guard'
+  gem 'guard-readme-on-github'
 end
 
 group :test do
