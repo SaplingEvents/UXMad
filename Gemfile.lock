@@ -186,8 +186,11 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   cucumber-rails
+<<<<<<< HEAD
   guard
   guard-readme-on-github
+=======
+>>>>>>> Add heroku gem.
   heroku
   jquery-rails
   pg
