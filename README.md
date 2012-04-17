@@ -7,7 +7,7 @@ As of yet there is no administrative functionality in the app. In order to chang
 1. `heroku pgbackups:capture --app uxmad-production` # Make a fresh copy of production
 1. Pull it down to staging
 ``` 
-`heroku pgbackups:restore DATABASE `heroku pgbackups:url --app uxmad-production` --app uxmad-staging --confirm uxmad-staging`
+heroku pgbackups:restore DATABASE `heroku pgbackups:url --app uxmad-production` --app uxmad-staging --confirm uxmad-staging
 ```
 1. `heroku console` # Make changes as needed.
 1. Smoke test on staging http://uxmad-staging.com
