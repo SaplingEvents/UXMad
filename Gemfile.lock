@@ -188,7 +188,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  copycopter_client (= 2.0.0)
+  copycopter_client
   cucumber-rails
 <<<<<<< HEAD
   guard
