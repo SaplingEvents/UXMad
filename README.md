@@ -14,7 +14,7 @@ heroku pgbackups:restore DATABASE `heroku pgbackups:url --app uxmad-production` 
 ```
 1. Make changes as needed.
 ```
-heroku console
+heroku console --app uxmad-staging
 ```
 1. Smoke test on staging http://uxmad-staging.com
 1. Make a fresh backup of staging
