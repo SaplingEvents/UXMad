@@ -24,8 +24,7 @@ gem 'jquery-rails'
 group :development, :test do
   gem 'pry'
   gem 'pry-doc'
-  # To use debugger
-  # gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'heroku'
   gem 'guard'
   gem 'guard-readme-on-github'
 end

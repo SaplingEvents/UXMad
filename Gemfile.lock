@@ -28,6 +28,7 @@ GEM
     activesupport (3.2.1)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    addressable (2.2.7)
     arel (3.0.2)
     builder (3.0.0)
     capybara (1.1.2)
@@ -72,6 +73,11 @@ GEM
     guard-readme-on-github (0.0.1)
       guard (>= 0.10.0)
       rdiscount (~> 1.6)
+    heroku (2.25.0)
+      launchy (>= 0.3.2)
+      netrc (~> 0.7.1)
+      rest-client (~> 1.6.1)
+      rubyzip
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.3)
@@ -79,6 +85,8 @@ GEM
       railties (>= 3.2.0, < 5.0)
       thor (~> 0.14)
     json (1.6.5)
+    launchy (2.1.0)
+      addressable (~> 2.2.6)
     mail (2.4.3)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -86,6 +94,7 @@ GEM
     method_source (0.7.1)
     mime-types (1.17.2)
     multi_json (1.1.0)
+    netrc (0.7.1)
     nokogiri (1.5.0)
     pg (0.13.2)
     polyglot (0.3.3)
@@ -122,6 +131,8 @@ GEM
     rdiscount (1.6.8)
     rdoc (3.12)
       json (~> 1.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec (2.8.0)
       rspec-core (~> 2.8.0)
       rspec-expectations (~> 2.8.0)
@@ -177,6 +188,7 @@ DEPENDENCIES
   cucumber-rails
   guard
   guard-readme-on-github
+  heroku
   jquery-rails
   pg
   pry
