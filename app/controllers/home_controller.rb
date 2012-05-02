@@ -1,8 +1,9 @@
 class HomeController < ApplicationController
   def home
     @speakers = Speaker.all
+    @sponsors = Sponsor.all
   end
-  
+
   def speakers
   end
 

@@ -1,0 +1,25 @@
+<%- if @sponsors.any? %>
+  <article class="content_block_alpha">
+    <header>
+      <h1>the sponsors</h1>
+    </header>
+    <section class="sponsors">
+      <div class="sponsor_block">
+        <ul class="cycle" id="sponsor_cycle">
+          <% @sponsors.each do |sponsor| %>
+            <li>
+              <h2><%= sponsor.name %></h2>
+              <%= image_tag sponsor.image_path %>
+              <p><%= sponsor.description %></p>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="link_carousel">
+        <button class="prev iconfont_alpha">1</button>
+        <p><span id="current_sponsor">1</span> / <%= @sponsors.count || 0 %></p>
+        <button class="next iconfont_alpha">2</button>
+      </div>
+    </section>
+  </article>
+<% end %>
