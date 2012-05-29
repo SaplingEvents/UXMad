@@ -23,6 +23,7 @@ group :development, :test do
   gem 'pry'
   gem 'pry-doc'
   gem 'heroku'
+  gem 'heroku_san'
   gem 'guard'
   gem 'guard-readme-on-github'
 end
