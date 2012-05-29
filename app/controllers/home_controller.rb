@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def home
-    @speakers = Speaker.all
+    @speakers = Speaker.all.shuffle
     @sponsors = Sponsor.all
   end
 
