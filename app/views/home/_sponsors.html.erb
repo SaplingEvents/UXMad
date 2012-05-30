@@ -6,13 +6,7 @@
     <section class="sponsors">
       <div class="sponsor_block">
         <ul class="cycle" id="sponsor_cycle">
-          <% @sponsors.each do |sponsor| %>
-            <li>
-              <h2><%= sponsor.name %></h2>
-              <%= image_tag sponsor.image_path %>
-              <p><%= sponsor.description %></p>
-            </li>
-          <% end %>
+          <%= render :partial => 'speaker', :collection => @sponsors %>
         </ul>
       </div>
       <div class="link_carousel">

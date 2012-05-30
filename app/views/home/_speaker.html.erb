@@ -1,0 +1,7 @@
+<li>
+  <h2><%= speaker.name %></h2>
+  <%= image_tag speaker.image_path if speaker.image_path.present? %>
+  <%= link_to "Website", speaker.website_url %>
+  <%= link_to "Twitter", "http://www.twitter.com/" + speaker.twitter_username if speaker.twitter_username %>
+  <p><%= speaker.bio %></p>
+</li>

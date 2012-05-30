@@ -4,15 +4,7 @@
 <section class="speakers">
 <div class="speaker_block">
   <ul class="cycle" id="speaker_cycle">
-    <% @speakers.each do |speaker| %>
-      <li>
-        <h2><%= speaker.name %></h2>
-        <%= image_tag speaker.image_path if speaker.image_path.present? %>
-        <%= link_to "Website", speaker.website_url %>
-        <%= link_to "Twitter", "http://www.twitter.com/" + speaker.twitter_username if speaker.twitter_username %>
-        <p><%= speaker.bio %></p>
-      </li>
-    <% end %>
+    <%= render :partial => 'speaker', :collection => @speakers %>
   </ul>
 </div>
 <div class="link_carousel">
