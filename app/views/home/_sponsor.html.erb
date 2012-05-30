@@ -1,5 +1,5 @@
 <li>
   <h2><%= sponsor.name %></h2>
-  <%= image_tag sponsor.image_path %>
+  <%= image_tag sponsor.image_path if sponsor.image_path %>
   <p><%= sponsor.description %></p>
 </li>
