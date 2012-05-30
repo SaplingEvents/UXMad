@@ -5,17 +5,27 @@
   section {
     padding: 0 #{25 / $em}rem;
   }
-  img {
+  img.speaker-image {
     width: #{80 / $em}rem;
     height: #{125 / $em}rem;
     float: left;
     padding-right: #{30 / $em}rem;
     padding-bottom: #{10 / $em}rem;
   }
+  .sponsor-image-block {
+    text-align: center;
+
+    img.sponsor-image {
+      display: block;
+      margin: auto 0;
+      max-width: 200px;
+      padding: 0;
+    }
+  }
   .speakers {
     padding: 0;
   }
-  .speaker_block {
+  .speaker_block, .sponsor_block {
     @include grid(12,12,percent);
     float:none !important;
     li {
