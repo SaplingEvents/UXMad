@@ -15,3 +15,8 @@
 a.undecorate {
   text-decoration: none;
 }
+
+p.schedule_link {
+  text-align: center;
+  margin-top: 10px;
+}
