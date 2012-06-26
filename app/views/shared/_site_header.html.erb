@@ -1,7 +1,9 @@
 <header>
 <div class="site_header">
   <%= render :partial => "shared/site_nav" %>
-  <div class="logo">UXMad</div>
+  <%= link_to root_path, :id => 'logo' do %>
+    <div class="logo">UXMad</div>
+  <%- end %>
   <div class="event_date">July 19 - 21, 2012<br>Overture Center<br>Madison, WI</div>
 </div>
 <hgroup class="site_hgroup">
