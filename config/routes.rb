@@ -3,9 +3,9 @@ UXMad::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-#  get "/speakers" => 'home#speakers'
+  get "/speakers" => 'home#speakers'
+  get "/sponsors" => 'home#sponsors'
 #  get "/schedule" => 'home#schedule'
-#  get "/sponsors" => 'home#sponsors'
 #  get "/travel" => 'home#travel'
   get "/register" => 'home#register'
 #  get "/about" => 'home#about'
