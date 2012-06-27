@@ -9,7 +9,7 @@
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tag %>
   </head>
-  <body>
+  <body id="<%= [controller_name.capitalize, action_name.capitalize].join %>">
     <section class="container">
 
     <%= render :partial => "shared/site_header" %>
