@@ -1,5 +1,8 @@
 <li>
-  <h2><%= speaker.name %></h2>
+  <a name="<%= speaker.twitter_username %>">
+    <h2><%= speaker.name %></h2>
+  </a>
+
   <%= image_tag speaker.image_path, :class => 'speaker-image' if speaker.image_path.present? %>
   <%= link_to "Website", speaker.website_url %>
   <%= link_to "Twitter", "http://www.twitter.com/" + speaker.twitter_username if speaker.twitter_username %>

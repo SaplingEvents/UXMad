@@ -5,7 +5,7 @@
   <%= link_to "Twitter", "http://www.twitter.com/" + speaker.twitter_username if speaker.twitter_username %>
   <p><%= truncate(speaker.bio, :length => 260) %></p>
   <p><%- if speaker.bio.length > 260 %>
-    <%= link_to "More", "speakers/##{speaker.twitter_username}" %>
+    <%= link_to "More", "speakers##{speaker.twitter_username}" %>
     <%- end %>
   </p>
 </li>
