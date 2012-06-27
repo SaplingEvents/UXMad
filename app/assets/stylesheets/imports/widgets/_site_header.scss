@@ -7,7 +7,7 @@
     @include grid(12,3,percent);
     @include alpha;
     @include prefix(12,1,percent);
-    @extend .headings_4;
+    @extend .headings_3;
     color: $alpha_color;
     a {
       text-decoration: none;
@@ -20,6 +20,10 @@
   .logo {
     @include grid(12,4,percent);
     text-indent: -9999px;
+    height:70px;
+  }
+  #logo {
+    display:block;
   }
   .event_date {
     @include grid(12,3,percent);
@@ -31,8 +35,8 @@
   }
   li {
     float: left;
-    width: 50%;
-    margin-bottom: 0.5em;
+    width: 100%;
+    margin-bottom:0;
   }
 }
 
