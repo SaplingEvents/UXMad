@@ -1,14 +1,12 @@
 <li>
-  <h2><%= sponsor.name %></h2>
+  <a name="<%= sponsor.anchor_name %>">
+    <h2><%= sponsor.name %></h2>
+  </a>
   <%- if sponsor.image_path? %>
     <div class="sponsor-image-block">
       <%= image_tag sponsor.image_path, :class => 'sponsor-image' %>
     </div>
   <% end %>
   <p><%= link_to "Website", sponsor.url if sponsor.url %></p>
-  <p><%= truncate(sponsor.description, :length => 260) %></p>
-  <p><%- if sponsor.description.length > 260 %>
-    <%= link_to "More", "sponsors##{sponsor.anchor_name}" %>
-    <%- end %>
-  </p>
+  <p><%= sponsor.description %></p>
 </li>
