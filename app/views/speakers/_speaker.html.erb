@@ -3,8 +3,15 @@
     <h2><%= speaker.name %></h2>
   </a>
 
-  <%= image_tag speaker.image_path, :class => 'speaker-image' if speaker.image_path.present? %>
-  <%= link_to "Website", speaker.website_url %>
-  <%= link_to "Twitter", "http://www.twitter.com/" + speaker.twitter_username if speaker.twitter_username %>
-  <p><%= speaker.bio %></p>
+  <div class="speaker-image-block">
+    <%= image_tag speaker.image_path, :class => 'speaker-image' if speaker.image_path.present? %>
+  </div>
+
+  <div class="speaker-description-block">
+    <%= link_to "Website", speaker.website_url %>
+    <%= link_to "Twitter", "http://www.twitter.com/" + speaker.twitter_username if speaker.twitter_username && !speaker.twitter_username.blank? %>
+    <p><%= speaker.bio %></p>
+  </div>
 </li>
+
+<div class="clearfix spacing"></div>
