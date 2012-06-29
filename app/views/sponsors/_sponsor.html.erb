@@ -1,4 +1,4 @@
-<li>
+<li class="sponsor">
   <a name="<%= sponsor.anchor_name %>">
     <h2><%= sponsor.name %></h2>
   </a>
@@ -7,6 +7,9 @@
       <%= image_tag sponsor.image_path, :class => 'sponsor-image' %>
     </div>
   <% end %>
-  <p><%= link_to "Website", sponsor.url if sponsor.url %></p>
-  <p><%= sponsor.description %></p>
+  <div class="sponsor-description-block">
+    <p><%= link_to "Website", sponsor.url if sponsor.url %></p>
+    <p><%= sponsor.description %></p>
+  </div>
 </li>
+<div class="clearfix spacing"></div>

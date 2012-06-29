@@ -1,0 +1,29 @@
+$pageWidth: 900px;
+$imageWidth: 220px;
+$descriptionWidth: $pageWidth - $imageWidth;
+
+#SponsorsIndex {
+  li.sponsor {
+    .sponsor-image-block {
+      display: block;
+      float: left;
+      min-width: $imageWidth;
+      min-height: 160px;
+      img {
+        margin: 0 auto;
+        display: block;
+      }
+    }
+    .sponsor-description-block {
+      display: block;
+      float: left;
+      min-height: 160px;
+      width: $descriptionWidth;
+    }
+  }
+
+  .spacing {
+    margin-bottom: 60px;
+  }
+
+}
