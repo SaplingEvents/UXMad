@@ -25,12 +25,22 @@
   .speakers {
     padding: 0;
   }
+  .speaker_block {
+    margin: 0;
+    li {
+      padding: 0 25px;
+    }
+  }
+  .sponsor_block {
+    li {
+      padding: 0;
+    }
+  }
   .speaker_block, .sponsor_block {
     @include grid(12,12,percent);
     float:none !important;
     li {
       width: 250px;
-      padding: 0 25px;
       h2 {
         margin-top: 10px;
       }
