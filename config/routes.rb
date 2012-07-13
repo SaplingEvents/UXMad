@@ -15,6 +15,7 @@ UXMad::Application.routes.draw do
 #  get "/about" => 'home#about'
 #  get "/contact" => 'home#contact'
 
+  get "/expect" => 'home#expect'
   root :to => "home#home"
 
   get "/axle" => "axle#grids"

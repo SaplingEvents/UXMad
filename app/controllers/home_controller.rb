@@ -4,6 +4,9 @@ class HomeController < ApplicationController
     @sponsors = Sponsor.all
   end
 
+  def expect
+  end
+
   def speakers
   end
 
