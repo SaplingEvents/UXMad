@@ -25,3 +25,4 @@ heroku pgbackups:capture --app uxmad-staging
 ```
 heroku pgbackups:restore DATABASE `heroku pgbackups:url --app uxmad-staging` --app uxmad-production --confirm uxmad-production
 ```
+
