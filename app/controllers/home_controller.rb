@@ -1,7 +1,5 @@
 class HomeController < ApplicationController
   def home
-    @speakers = Speaker.all.shuffle
-    @sponsors = Sponsor.all
   end
 
   def expect
