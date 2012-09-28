@@ -1,4 +1,4 @@
-UXMad::Application.routes.draw do
+SnowMobile::Application.routes.draw do
 
   ActiveAdmin.routes(self)
 

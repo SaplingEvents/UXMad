@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-UXMad::Application.load_tasks
+SnowMobile::Application.load_tasks
