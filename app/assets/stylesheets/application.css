@@ -10,15 +10,6 @@
  *
  *= require_self
  *= require core
- *= require sponsors
- *= require speakers
+ /* *= require sponsors */
+ /* *= require speakers */
 */
-
-a.undecorate {
-  text-decoration: none;
-}
-
-p.schedule_link {
-  text-align: center;
-  margin-top: 10px;
-}
