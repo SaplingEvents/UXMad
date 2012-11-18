@@ -1,15 +1,480 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require core
- /* *= require sponsors */
- /* *= require speakers */
-*/
+/* Universal styles and mobile browser styles */
+
+/* general */
+body {
+  margin: 0;
+  background-image: linear-gradient(bottom, rgb(97,97,99) 18%, rgb(96,97,99) 59%, rgb(96,97,99) 80%);
+  background-image: -o-linear-gradient(bottom, rgb(97,97,99) 18%, rgb(96,97,99) 59%, rgb(96,97,99) 80%);
+  background-image: -moz-linear-gradient(bottom, rgb(97,97,99) 18%, rgb(96,97,99) 59%, rgb(96,97,99) 80%);
+  background-image: -webkit-linear-gradient(bottom, rgb(97,97,99) 18%, rgb(96,97,99) 59%, rgb(96,97,99) 80%);
+  background-image: -ms-linear-gradient(bottom, rgb(97,97,99) 18%, rgb(96,97,99) 59%, rgb(96,97,99) 80%);
+  background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(0.18, rgb(97,97,99)),
+  color-stop(0.59, rgb(96,97,99)),
+  color-stop(0.8, rgb(96,97,99))
+  );
+  filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#606163', endColorstr='#616163'); /* IE6 & IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#606163', endColorstr='#616163')"; /* IE8 */
+}
+#parentwrapper {
+  max-width: 320px;
+}
+
+#wrapper {
+  float: left;
+  margin-top: 0;
+  padding: 0 10px;
+  max-width: 100%;
+  background-image: linear-gradient(bottom, rgb(158,182,194) 10%, rgb(70,70,72) 41%, rgb(64,64,65) 73%);
+  background-image: -o-linear-gradient(bottom, rgb(158,182,194) 10%, rgb(70,70,72) 41%, rgb(64,64,65) 73%);
+  background-image: -moz-linear-gradient(bottom, rgb(158,182,194) 10%, rgb(70,70,72) 41%, rgb(64,64,65) 73%);
+  background-image: -webkit-linear-gradient(bottom, rgb(158,182,194) 10%, rgb(70,70,72) 41%, rgb(64,64,65) 73%);
+  background-image: -ms-linear-gradient(bottom, rgb(158,182,194) 10%, rgb(70,70,72) 41%, rgb(64,64,65) 73%);
+  background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(0.1, rgb(158,182,194)),
+  color-stop(0.41, rgb(70,70,72)),
+  color-stop(0.73, rgb(64,64,65))
+  );
+  filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#404041', endColorstr='#9eb6c2'); /* IE6 & IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#404041', endColorstr='#9eb6c2')"; /* IE8 */
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+/* typography */
+
+@font-face
+{
+  font-family: Miso;
+  src: url('../assets/fonts/miso-regular-webfont.eot');
+  src: url('../assets/fonts/miso-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/miso-regular-webfont.woff') format('woff'),
+  url('../assets/fonts/miso-regular-webfont.ttf') format('truetype'),
+  url('../assets/fonts/miso-regular-webfont.svg#Miso') format('svg');
+
+}
+p {
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 1.1em;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li {
+  font-family: Miso;
+  color: #fff;
+}
+
+hr {
+  height: 1px;
+  background: #646567;
+  border: 0;
+}
+
+h2 {   /* blue non-upper case text */
+  color: #c7eafc;
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+h3 {  /* blue upper case text */
+  text-transform: uppercase;
+  color: #c7eafc;
+  font-size: 1.8em;
+  display: inline-block;
+  padding-right: 10px;
+}
+
+h3.right-align {
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.yellow-link-upper {
+  text-transform: uppercase;
+  color: #fadb2f;
+}
+a.yellow-link-lower {
+  color: #fadb2f;
+  font-size: 1.2em;
+}
+
+a.yellow-link-lower-right {
+  color: #fadb2f;
+  font-size: 1.2em;
+  padding-left: 250px;
+}
+
+/* header styles */
+#logo {
+  max-width: 45%;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+#eventdates {
+  padding-top: 20px;
+  text-align: center;
+}
+
+/* nav styles */
+#menu {
+  background: #c7eafc;
+  clear:both;
+}
+
+#menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 0;
+  /* max-width: 100%; */
+}
+
+#menu ul li {
+  background: #c7eafc;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #3a3a3c;
+}
+
+#menu ul li:hover {
+  background: #e3f4fd;
+}
+
+#menu ul li:last-child {
+  background: #fadb2f;
+}
+
+#menu ul li a {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5em;
+  color: #3a3a3c;
+}
+
+#speakers { /*speakers section on front page */
+  border-top: 1px solid #646567;
+  border-bottom: 1px solid #646567;
+}
+
+#socialmedia {
+  text-align: center;
+}
+
+#sponsor_carousel img {
+  float: left;
+}
+
+#sponsor_carousel p {
+  font-size: .8em;
+  width: 200px;
+}
+
+/* floats and clears and padding applicable to all display sizes */
+#description {
+  clear: both;
+  padding-bottom: 5px;
+  line-height: 1.5em;
+}
+
+#schedule {
+  padding-top: 20px;
+}
+
+#sponsors {
+  padding-top: 30px;
+}
+
+/* icons */
+
+.icon-show {   /* hide certain images on smaller displays */
+  display: none;
+}
+
+.icon-party {
+  /* background-image: url(img/afterparty.png); */
+  background-position: right center;
+  background-repeat: no-repeat;
+  height: 1.4em;
+}
+
+.icon-questions {
+  /* background-image: url(img/questions.png); */
+  background-position: right center;
+  background-repeat: no-repeat;
+  height: 1.4em;
+}
+
+.icon-travel {
+  /* background-image: url(img/travel.png); */
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 1.4em;
+  padding-right: 10px;
+}
+
+.icon-facebook {
+  max-width: 15%;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#snowdrifts {
+  clear:both;
+  text-align: center;
+  background: url(../assets/images/snowdrift_front.png) no-repeat bottom left, url(../assets/images/snowdrift_middle.png) no-repeat bottom right, url(../assets/images/snowdrift_back.png) no-repeat bottom right;
+  height: 275px;
+}
+
+#snowdrifts a, #snowdrifts p {
+  color: #c7eafc;
+  font-size: 1em;
+}
+
+/* -------------------------------------- */
+/* styling for sub pages */
+/* -------------------------------------- */
+
+#lodging_hotel, #lodging_hostel {
+  padding-left: 20px;
+}
+
+#union_hotel {
+  float: left;
+}
+
+#union_hotel img {
+  max-width: 35%;
+  padding: 0 20px;
+}
+
+#hostel {
+  clear:both;
+  float: left;
+}
+
+.lodging_details {
+  float: left;
+  padding: 50px 10px 0px 50px;
+}
+
+#schedule_page ul , #sponsor_page ul {
+  list-style-type: none;
+}
+
+#sponsor_page  {
+  width: 85%;
+}
+
+#sponsor_page li {
+  clear: both;
+}
+
+#sponsor_page p  {
+  padding-top: 10px;
+  vertical-align: middle;
+}
+
+#sponsor_page img {
+  float: left;
+  padding: 10px;
+}
+
+#speaker_page {
+  float: none;
+}
+
+.speaker_photo, .sponsor_logo{
+  float: left;
+  padding-left: 20px;
+  /* max-width: 15%; */
+}
+
+.sponsor_logo {
+  width: 40%;
+}
+
+.speaker_bio  {
+  float: left;
+  padding-left: 5px;
+  /* width: 55%; */
+}
+
+.sponsor_bio {
+  float: left;
+  padding-left: 10px;
+  /* width: 65%; */
+}
+
+.speaker_info  {
+  float: left;
+  /* width: 20%; */
+  padding: 20px;
+  margin: 5px 0 15px 20px;
+  font-size: 13px;
+  background-color: #58585a;
+  clear: both;
+  width: 80%;
+}
+
+.sponsor_info {
+  float: left;
+  /* width: 20%; */
+  padding: 20px;
+  margin: 0 15px 15px 15px;
+  font-size: 14px;
+  background-color: #58585a;
+}
+
+.speaker_info a {
+  padding-left: 10px;
+}
+
+.filler {
+  clear: both;
+}
+
+/* -------------------------------------- */
+/* responsive styles for desktop displays */
+/* -------------------------------------- */
+
+@media only screen and (min-width: 768px) {
+  #parent_wrapper {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  #wrapper {
+    max-width: 800px;
+  }
+
+  .leftcol-wide {
+    width: 63%;
+  }
+
+  .leftcol-narrow {
+    width: 38%;
+  }
+
+  .rightcol-wide {
+    width: 60%;
+  }
+
+  .rightcol-narrow {
+    width: 36%;
+  }
+
+  /* floats and clears, section sizing */
+
+  #logo {
+    width: 50%;
+    float: left;
+  }
+
+  #eventdates {
+    padding: 50px 5px 0 40px;
+    float: left;
+    text-align: left;
+  }
+
+  section  {
+    float: left;
+  }
+
+  #contact{
+    clear: both;
+  }
+  #menu ul{
+
+  }
+
+  #menu ul li {
+    float: left;
+    padding: 15px 40px;
+  }
+
+  #description {
+    padding-left: 15px;
+  }
+
+  #description_photo {
+    max-width: 55%;
+    float: left;
+    padding: 15px;
+  }
+
+  #speakers {
+    clear: both;
+    width: 100%;
+  }
+
+  #schedule {
+    clear: both;
+  }
+
+  #socialmedia {
+    float: left;
+    padding-top: 20px;
+  }
+
+  #afterparty{
+    padding-right: 30px;
+  }
+
+  #snowdrifts {
+    height: 250px;
+  }
+
+  /* change how font displays on desktop displays */
+  h3 {
+    display: inline-block;
+  }
+
+  /* show images on desktop displays */
+  .icon-show {
+    display: block;
+    margin: 0 auto;
+    max-width: 25%;
+  }
+
+  /* -------------------------------------- */
+  /* responsive styles for desktop displays - sub pages */
+  /* -------------------------------------- */
+
+  .lodging_details {
+    width: 25%;
+  }
+
+  .sponsor_info, .speaker_info {
+    width: 20%;
+  }
+
+  .speaker_info {
+    clear: none;
+  }
+
+  .sponsor_bio {
+    width: 65%;
+  }
+
+  .speaker_bio {
+    width: 50%;
+  }
+
+  .speaker_photo, .sponsor_logo {
+    width: 15%;
+  }
+}

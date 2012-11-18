@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Snow*Mobile - A Mobile Development Conference February 15-16, 2013 in Madison, WI</title>
+    <title>Snow*Mobile Conference February 15-16, 2013 Union South Madison, WI</title>
     <%= favicon_link_tag %>
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
     <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag "application" %>
+    <%= stylesheet_link_tag "skin" %>
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript">
+      document.createElement("nav");
+      document.createElement("header");
+      document.createElement("footer");
+      document.createElement("section");
+      </script>
+      <![endif]-->
+
+    <%= javascript_include_tag 'jquery-1.4.2.min' %>
+    <%= javascript_include_tag 'jquery.jcarousel.min' %>
+    <script type="text/javascript">
+      jQuery(document).ready(function() {
+          jQuery('#schedule_carousel').jcarousel({ scroll: 1 });
+          jQuery('#speaker_carousel').jcarousel({ wrap: 'circular', scroll: 1 });
+          jQuery('#sponsor_carousel').jcarousel({ scroll: 1 });
+      });
+    </script>
+    <%= yield :head %>
     <%= csrf_meta_tag %>
   </head>
   <body id="<%= [controller_name.capitalize, action_name.capitalize].join %>">
-    <section class="container">
-
-    <div class="sub-container">
-      <%= yield %>
+    <div id="parent_wrapper">
+      <div id="wrapper">
+        <%= yield %>
+      </div>
     </div>
 
-    <footer>
-    <div class="designer_hr_full"></div>
-    Copyright &copy; 2012 &mdash; 2013 Snow*Mobile Conference  |  <a href="mailto:contact@snow-mobile.org">contact@snow-mobile.org</a>
+    <footer id="snowdrifts">
+    <p>Copyright &copy; 2012-2013 Snow * Mobile Conference - <a href="mailto:contact@snow-mobile.org">contact@snow-mobile.org</a> - <a href="policies.html">Policies</a></p>
     </footer>
 
     <script type="text/javascript">
@@ -33,6 +51,5 @@
       })();
 
     </script>
-    </section>
   </body>
 </html>

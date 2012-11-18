@@ -1,30 +1,102 @@
-<section id="logo">
-<%= image_tag "/assets/snow-mobile.png", :style => 'display: block; margin: 20px auto;' %>
-
-  <h1>Snow*Mobile Conference</h1>
-  <h2>February 15 - 16, 2013 at Union South in Madison, WI</h2>
+<header id="head">
+  <div id="logo"><a href="/"><%= image_tag "logo.png" %></a></div>
+  <div id="eventdates">
+    <h2>Conference - <span style="color:#fff;">Feb 15-16, 2013</span><br />
+      Union South - Madison, WI</h2>
+  </div>
+</header>
+<nav id="menu">
+<ul>
+  <li><a href="speakers.html">Speakers</a></li>
+  <li><a href="schedule.html">Schedule</a></li>
+  <li><a href="sponsors.html">Sponsors</a></li>
+  <li><a href="lodging.html">Lodging</a></li>
+  <li><a href="http://2013.snow-mobile.org">Register</a></li>
+</ul>
+</nav>
+<section id="description" class="leftcol-narrow">
+<h1>Snow*Mobile</h1><p>Two days under one roof sharing everything mobile.  Thats right, meaningful discussion about Mobile Development (iOS, Android, Window Phone, Mobile Web) in Madison.  Additionally, there are four restaurants, a bowling alley, a rock climbing wall, ice cream shop, and Live Music both nights of the event.</p>
+<a href="http://2013.snow-mobile.org" class="yellow-link-upper">Register Now >></a>
 </section>
-
-<section>
-  <p>
-    Have you found it’s hard to find folks having meaningful discussion about Mobile Development (iOS, Android, Window Phone, Mobile Web) in Madison? Wouldn’t it be great to join a community of people who recognize the explosion of mobile devices and see how they are affecting our interactions? What if we could pull together locals and invite some experts from around the country and have that conversation in Madison?
-  </p>
-
-  <p>
-    This community exists in Madison and its members are quietly shaping the future of devices and apps that you rely on every day. We’re bringing them together under one roof for two days in the middle of the winter in Wisconsin because we know there isn’t much to do between New Years and Memorial Day.
-  </p>
-  <h5>Winter? In Wisconsin?</h5>
-  <p>Yep. If the white stuff scares you, you <em>could</em> stay inside for the duration event, the venue and hotel are connected. Additionally, there are four restaurants, a bowling alley, a rock climbing wall, Ice cream shop, and Live Music both nights of the event. Our organizers have orchestrated two years of <a href="http://madisonruby.org">Madison Ruby</a> and added a new knockout event in 2012 called <a href="http://uxmad.com">UXMad</a> and know how to deliver a good time while building an inspiring and enlightening program. Venue rooms are limited so, <a href="http://www.union.wisc.edu/wuhotel-reservations.htm">book your room at the Wisconsin Union Hotel</a> today and use our group code: SNOWMOBILE.</p>
-  <br />
+<section id="description_photo">
+<%= image_tag "phone_in_snow.jpg" %>
 </section>
-
-<section>
-  <%= link_to "Sign-up for updates or Buy a ticket!", "http://2013.snow-mobile.org", :style => "font-size: 150%" %>
-  <br />
-  <%= link_to "Call for Proposals", "https://sapling.wufoo.com/forms/snowmobile-conference-call-for-proposals/" %>
-  <br />
-  <%= link_to "Sign-up to Volunteer (Students Only)", "https://sapling.wufoo.com/forms/snowmobile-student-volunteer-application/" %>
-  <br />
-  <%= link_to "Apply to Sponsor", "https://sapling.wufoo.com/forms/apply-to-be-a-snowmobile-sponsor/" %>
-  <br />
+<section id="speakers">
+<h3>Speakers</h3> <a href="speakers.html" class="yellow-link-lower">View All >></a>
+<ul id="speaker_carousel" class="jcarousel-skin-speaker">
+  <li><img src="img/unknown.jpg">You?<br /><a href="mailto:contact@snow-mobile.org">contact@snow-mobile.org</a></li>
+  <li><img src="img/unknown.jpg">You?<br /><a href="mailto:contact@snow-mobile.org">contact@snow-mobile.org</a></li>
+  <li><img src="img/unknown.jpg">You?<br /><a href="mailto:contact@snow-mobile.org">contact@snow-mobile.org</a></li>
+  <li><img src="img/unknown.jpg">You?<br /><a href="mailto:contact@snow-mobile.org">contact@snow-mobile.org</a></li>
+  <li><img src="img/unknown.jpg">You?<br /><a href="mailto:contact@snow-mobile.org">contact@snow-mobile.org</a></li>
+  <li><img src="img/unknown.jpg">You?<br /><a href="mailto:contact@snow-mobile.org">contact@snow-mobile.org</a></li>
+  <li><img src="img/unknown.jpg">You?<br /><a href="mailto:contact@snow-mobile.org">contact@snow-mobile.org</a></li>
+  <li><img src="img/unknown.jpg">You?<br /><a href="mailto:contact@snow-mobile.org">contact@snow-mobile.org</a></li>
+</ul>
 </section>
+<section id="schedule" class="leftcol-wide jcarousel-skin-tango">
+<ul id="schedule_carousel" class="jcarousel-skin-tango">
+  <li>Friday, 2/15<br />
+    8am &mdash; Check In<br />
+    9am &mdash; Sessions<br />
+    Noon &mdash; Lunch<br />
+    1pm &mdash; Sessions<br />
+    8pm &mdash; Conference Party</li>
+  <li>Saturday, 2/16<br />
+    9am &mdash; Sessions<br />
+    Noon &mdash; Lunch<br />
+    1pm &mdash; Sessions<br />
+    TBD</li>
+</ul>
+<a href="schedule.html" class="yellow-link-lower-right">Detailed Schedule >></a><br />
+<h3>Killer After Party!</h3>
+<%= image_tag 'afterparty.png', class: 'icon-party' %>
+<p id="afterparty">We are putting together a bash to celebrate the success of this event. The after-party will be held at The Sett. The Sett is the place to experience entertainment at Union South.
+  Features include:</p>
+<ul>
+  <li>Pool tables</li>
+  <li>Table games</li>
+  <li>Two-story climbing wall</li>
+  <li>One-story bouldering wall</li>
+  <li>Eight-lane bowling alley</li>
+</ul>
+</section>
+<section id="socialmedia" class="rightcol-narrow">
+<%= image_tag 'twitter.png', class: 'icon-show' %><br />
+<a class="twitter-timeline" href="https://twitter.com/SnowMobileConf" data-widget-id="262641519251570688">Tweets by @SnowMobileConf</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><br />
+<%= image_tag 'facebook.png', class: 'icon-facebook' %>
+<p>Snow*Mobile on Facebook</p>
+<div class="fb-like" data-href="https://www.facebook.com/snowmobileconf" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+</section>
+<section id="sponsors" class="leftcol-wide jcarousel-skin-sponsor">
+<ul id="sponsor_carousel" class="jcarousel-skin-sponsor">
+  <li><img src="img/logo_bendyworks.png"><p>Bendyworks</p></li>
+  <li><img src="img/unknown.jpg"><p>Your company here:<br /><a href="mailto:contact@snow-mobile.org">contact at snow-mobile.org</a></p></li>
+  <li><img src="img/unknown.jpg"><p>Your company here:<br /><a href="mailto:contact@snow-mobile.org">contact at snow-mobile.org</a></p></li>
+  <li><img src="img/unknown.jpg"><p>Your company here:<br /><a href="mailto:contact@snow-mobile.org">contact at snow-mobile.org</a></p></li>
+</ul>
+<a href="sponsors.html" class="yellow-link-lower-right">More Sponsors >></a>
+</section>
+<section id="directions" class="rightcol-narrow">
+<%= image_tag 'travel.png', class: 'icon-travel' %> <h3 class="right-align">How to Get Here</h3>
+<p>If snow scares you, you could stay inside for the duration event, the venue and hotel are one in the same.</p>
+<iframe width="250" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1308+W+Dayton+St,+Madison,+WI+53715&amp;aq=0&amp;oq=1308+W.+Dayton+St.+%09%09Madison,+WI+53715&amp;ie=UTF8&amp;hq=&amp;hnear=1308+W+Dayton+St,+Madison,+Dane,+Wisconsin+53715&amp;t=m&amp;ll=43.071835,-89.407854&amp;spn=0.01254,0.017252&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=1308+W+Dayton+St,+Madison,+WI+53715&amp;aq=0&amp;oq=1308+W.+Dayton+St.+%09%09Madison,+WI+53715&amp;ie=UTF8&amp;hq=&amp;hnear=1308+W+Dayton+St,+Madison,+Dane,+Wisconsin+53715&amp;t=m&amp;ll=43.071835,-89.407854&amp;spn=0.01254,0.017252&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+</section>
+<section id="contact">
+<h3><a href="https://sapling.wufoo.com/forms/contact-us-about-snowmobile/">Questions?</a></h3> <%= image_tag 'questions.png', class: 'icon-questions' %><br />
+<p>#: 608-515-8070<br />
+  <a href="mailto:email@contact@snow-mobile.org">email: contact@snow-mobile.org</a><br />
+  <a href="https://twitter.com/SnowMobileConf">@SnowMobileConf</a></p>
+</section>
+          </div>
+          <div id="fb-root"></div>
+          <script>
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=212851232173884";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+          </script>
