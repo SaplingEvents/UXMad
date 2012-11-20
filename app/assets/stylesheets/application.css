@@ -13,6 +13,7 @@
 */
 
 /* general */
+
 body {
   margin: 0;
   background-image: linear-gradient(bottom, rgb(97,97,99) 18%, rgb(96,97,99) 59%, rgb(96,97,99) 80%);
@@ -67,11 +68,11 @@ img {
 @font-face
 {
   font-family: Miso;
-  src: url('../assets/fonts/miso-regular-webfont.eot');
-  src: url('../assets/fonts/miso-regular-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../assets/fonts/miso-regular-webfont.woff') format('woff'),
-  url('../assets/fonts/miso-regular-webfont.ttf') format('truetype'),
-  url('../assets/fonts/miso-regular-webfont.svg#Miso') format('svg');
+  src: url('/fonts/miso-regular-webfont.eot');
+  src: url('/fonts/miso-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/miso-regular-webfont.woff') format('woff'),
+  url('/fonts/miso-regular-webfont.ttf') format('truetype'),
+  url('/fonts/miso-regular-webfont.svg#Miso') format('svg');
 
 }
 p {
@@ -247,7 +248,7 @@ a.yellow-link-lower-right {
 #snowdrifts {
   clear:both;
   text-align: center;
-  background: url(../assets/images/snowdrift_front.png) no-repeat bottom left, url(../assets/images/snowdrift_middle.png) no-repeat bottom right, url(../assets/images/snowdrift_back.png) no-repeat bottom right;
+  background: url(/images/snowdrift_front.png) no-repeat bottom left, url(/images/snowdrift_middle.png) no-repeat bottom right, url(/images/snowdrift_back.png) no-repeat bottom right;
   height: 275px;
 }
 
