@@ -1,0 +1,154 @@
+.jcarousel-skin-tango .jcarousel-container {
+    background: #58585a url(../img/schedule_header.jpg) no-repeat top right;
+}
+
+.jcarousel-skin-sponsor .jcarousel-container {
+    background: #58585a url(../img/sponsor_header.jpg) no-repeat top right;	
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl, .jcarousel-skin-speaker .jcarousel-direction-rtl, .jcarousel-skin-sponsor  .jcarousel-direction-rtl  {
+	direction: rtl;
+}
+
+.jcarousel-skin-tango .jcarousel-container-horizontal, .jcarousel-skin-sponsor .jcarousel-container-horizontal {
+    width: 300px;
+    padding: 20px 40px;
+}
+
+.jcarousel-skin-tango .jcarousel-clip , .jcarousel-skin-speaker .jcarousel-clip {
+    overflow: hidden;
+}
+
+.jcarousel-skin-sponsor .jcarousel-clip {
+    overflow: hidden;
+	width: 80px;
+	height: 160px;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-horizontal , .jcarousel-skin-sponsor .jcarousel-clip-horizontal{
+    width:  245px;
+    height: 175px;
+}
+
+.jcarousel-skin-speaker .jcarousel-clip-horizontal {
+    width:  580px !important; 
+    height: 160px;
+}
+
+.jcarousel-skin-tango .jcarousel-item, .jcarousel-skin-sponsor .jcarousel-item{
+    width: 245px;
+    height: 175px;
+	padding: 50px 0 10px 50px;
+	font-size: 1.2em;
+}
+
+.jcarousel-skin-sponsor .jcarousel-item  img{
+	max-width: 200px;
+	max-height: 150px;
+}
+
+.jcarousel-skin-speaker .jcarousel-item {
+    width: 75px;
+    height: 150px;
+	padding: 0 10px 10px 10px;
+	font-size: .8em;
+	display: inline;
+}
+
+.jcarousel-skin-tango .jcarousel-item-horizontal, .jcarousel-skin-sponsor .jcarousel-item-horizontal {
+	margin-left: 0;
+    margin-right: 10px;
+}
+
+.jcarousel-skin-speaker .jcarousel-item-horizontal { 
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal , .jcarousel-skin-sponsor .jcarousel-direction-rtl .jcarousel-item-horizontal, .jcarousel-skin-speaker .jcarousel-direction-rtl .jcarousel-item-horizontal{  
+	margin-left: 10px;
+    margin-right: 0;
+}
+
+.jcarousel-skin-tango .jcarousel-item-placeholder, .jcarousel-skin-sponsor .jcarousel-item-placeholder, .jcarousel-skin-speaker .jcarousel-item-placeholder{ /* added speaker here - no effect */
+    background: #fff;
+    color: #000;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-horizontal, .jcarousel-skin-sponsor .jcarousel-next-horizontal  {
+    position: absolute;
+    top: 90px;
+    right: 15px;
+    width: 40px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(../img/next-horizontal.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-speaker .jcarousel-next-horizontal {
+    position: absolute;
+    top: 60px;
+    right: 8px;
+    width: 40px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(../img/next-horizontal.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-next-horizontal, .jcarousel-skin-sponsor .jcarousel-direction-rtl .jcarousel-next-horizontal, .jcarousel-skin-speaker .jcarousel-direction-rtl .jcarousel-next-horizontal{  
+    left: 5px;
+    right: auto;
+    background-image: url(..img/prev-horizontal.png);
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal, .jcarousel-skin-sponsor .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 90px;
+    left: 15px;
+    width: 40px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(../img/prev-horizontal.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-speaker .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 60px;
+    left: -45px;
+    width: 40px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(../img/prev-horizontal.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-prev-horizontal, .jcarousel-skin-speaker .jcarousel-direction-rtl .jcarousel-prev-horizontal, .jcarousel-skin-sponsor .jcarousel-direction-rtl .jcarousel-prev-horizontal{
+    left: auto;
+    right: 5px;
+    background-image: url(../img/next-horizontal.png);
+}
+
+@media only screen and (min-width: 420px) {
+	.jcarousel-skin-speaker {
+		padding-left: 160px;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	.jcarousel-skin-speaker .jcarousel-clip-horizontal {
+		width: 280px !important;
+		padding-left: 50px;
+	}
+	
+	.jcarousel-skin-speaker .jcarousel-prev-horizontal {
+		left: 0px;
+	}
+	
+	.jcarousel-skin-speaker .jcarousel-list-horizontal {
+
+	}
+}
+
+

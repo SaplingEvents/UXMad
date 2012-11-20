@@ -67,7 +67,7 @@ Backtrace:
 /Users/jim/.rvm/gems/ruby-1.9.3-p0@snow_mobile/gems/activerecord-3.2.5/lib/active_record/query_cache.rb:64:in `call'
 /Users/jim/.rvm/gems/ruby-1.9.3-p0@snow_mobile/gems/activerecord-3.2.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
 /Users/jim/.rvm/gems/ruby-1.9.3-p0@snow_mobile/gems/actionpack-3.2.5/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-/Users/jim/.rvm/gems/ruby-1.9.3-p0@snow_mobile/gems/activesupport-3.2.5/lib/active_support/callbacks.rb:405:in `_run__969467194338784639__call__1973940793205892226__callbacks'
+/Users/jim/.rvm/gems/ruby-1.9.3-p0@snow_mobile/gems/activesupport-3.2.5/lib/active_support/callbacks.rb:405:in `_run__1282792221866920308__call__2639126070159446014__callbacks'
 /Users/jim/.rvm/gems/ruby-1.9.3-p0@snow_mobile/gems/activesupport-3.2.5/lib/active_support/callbacks.rb:405:in `__run_callback'
 /Users/jim/.rvm/gems/ruby-1.9.3-p0@snow_mobile/gems/activesupport-3.2.5/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
 /Users/jim/.rvm/gems/ruby-1.9.3-p0@snow_mobile/gems/activesupport-3.2.5/lib/active_support/callbacks.rb:81:in `run_callbacks'
