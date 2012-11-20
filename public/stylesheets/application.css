@@ -216,21 +216,21 @@ a.yellow-link-lower-right {
 }
 
 .icon-party {
-  /* background-image: url(img/afterparty.png); */
+  /* background-image: url(images/afterparty.png); */
   background-position: right center;
   background-repeat: no-repeat;
   height: 1.4em;
 }
 
 .icon-questions {
-  /* background-image: url(img/questions.png); */
+  /* background-image: url(images/questions.png); */
   background-position: right center;
   background-repeat: no-repeat;
   height: 1.4em;
 }
 
 .icon-travel {
-  /* background-image: url(img/travel.png); */
+  /* background-image: url(images/travel.png); */
   background-position: left center;
   background-repeat: no-repeat;
   height: 1.4em;
