@@ -6,16 +6,15 @@
 <%= image_tag "phone_in_snow.jpg" %>
 </section>
 <section id="speakers">
-<h3>Speakers</h3> <a href="speakers.html" class="yellow-link-lower">View All >></a>
+<h3>Speakers</h3> <a href="/speakers" class="yellow-link-lower">View All >></a>
 <ul id="speaker_carousel" class="jcarousel-skin-speaker">
-  <li><img src="images/unknown.jpg">You?<br /><a href="mailto:contact@snow-mobile.org">contact@snow-mobile.org</a></li>
-  <li><img src="images/unknown.jpg">You?<br /><a href="mailto:contact@snow-mobile.org">contact@snow-mobile.org</a></li>
-  <li><img src="images/unknown.jpg">You?<br /><a href="mailto:contact@snow-mobile.org">contact@snow-mobile.org</a></li>
-  <li><img src="images/unknown.jpg">You?<br /><a href="mailto:contact@snow-mobile.org">contact@snow-mobile.org</a></li>
-  <li><img src="images/unknown.jpg">You?<br /><a href="mailto:contact@snow-mobile.org">contact@snow-mobile.org</a></li>
-  <li><img src="images/unknown.jpg">You?<br /><a href="mailto:contact@snow-mobile.org">contact@snow-mobile.org</a></li>
-  <li><img src="images/unknown.jpg">You?<br /><a href="mailto:contact@snow-mobile.org">contact@snow-mobile.org</a></li>
-  <li><img src="images/unknown.jpg">You?<br /><a href="mailto:contact@snow-mobile.org">contact@snow-mobile.org</a></li>
+  <%= Speaker.all.each do |speaker| %>
+    <li>
+      <%= image_tag speaker.image_path %>
+      <%= speaker.name %>
+      <br />
+    </li>
+  <% end %>
 </ul>
 </section>
 <section id="schedule" class="leftcol-wide jcarousel-skin-tango">
@@ -32,7 +31,7 @@
     1pm &mdash; Sessions<br />
     TBD</li>
 </ul>
-<a href="schedule.html" class="yellow-link-lower-right">Detailed Schedule >></a><br />
+<a href="http://snowmobile2013.sched.org" class="yellow-link-lower-right">Detailed Schedule >></a><br />
 <h3>Killer After Party!</h3>
 <%= image_tag 'afterparty.png', class: 'icon-party' %>
 <p id="afterparty">We are putting together a bash to celebrate the success of this event. The after-party will be held at The Sett. The Sett is the place to experience entertainment at Union South.
@@ -55,12 +54,16 @@
 </section>
 <section id="sponsors" class="leftcol-wide jcarousel-skin-sponsor">
 <ul id="sponsor_carousel" class="jcarousel-skin-sponsor">
-  <li><img src="images/logo_bendyworks.png"><p>Bendyworks</p></li>
-  <li><img src="images/unknown.jpg"><p>Your company here:<br /><a href="mailto:contact@snow-mobile.org">contact at snow-mobile.org</a></p></li>
-  <li><img src="images/unknown.jpg"><p>Your company here:<br /><a href="mailto:contact@snow-mobile.org">contact at snow-mobile.org</a></p></li>
-  <li><img src="images/unknown.jpg"><p>Your company here:<br /><a href="mailto:contact@snow-mobile.org">contact at snow-mobile.org</a></p></li>
+  <% Sponsor.all.each do |sponsor| %>
+    <li>
+      <%= image_tag sponsor.image_path %>
+      <p>
+        <%= sponsor.name %>
+      </p>
+    </li>
+  <% end %>
 </ul>
-<a href="sponsors.html" class="yellow-link-lower-right">More Sponsors >></a>
+<a href="/sponsors" class="yellow-link-lower-right">More Sponsors >></a>
 </section>
 <section id="directions" class="rightcol-narrow">
 <%= image_tag 'travel.png', class: 'icon-travel' %> <h3 class="right-align">How to Get Here</h3>

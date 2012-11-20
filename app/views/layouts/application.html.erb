@@ -32,7 +32,10 @@
     <div id="parent_wrapper">
       <div id="wrapper">
         <header id="head">
-        <div id="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+        <div id="logo">
+          <%= link_to root_path do %>
+            <img src="images/logo.png"></a></div>
+          <% end %>
         <div id="eventdates">
           <h2>Conference - <span style="color:#fff;">Feb 15-16, 2013</span><br />
             Union South - Madison, WI</h2>
@@ -40,10 +43,10 @@
         </header>
         <nav id="menu">
         <ul>
-          <li><%=link_to "Speakers", speakers_path%></li>
-          <li><%=link_to "Schedule", '#'%></li>
-          <li><%=link_to "Sponsors", sponsors_path%></li>
-          <li><%=link_to "Lodging", '#'%></li>
+          <li><%=link_to "Speakers", speakers_path %></li>
+          <li><%=link_to "Schedule", 'http://snowmobile2013.sched.org' %></li>
+          <li><%=link_to "Sponsors", sponsors_path %></li>
+          <li><%=link_to "Lodging", lodging_path %></li>
           <li><a href="http://2013.snow-mobile.org">Register</a></li>
         </ul>
         </nav>
