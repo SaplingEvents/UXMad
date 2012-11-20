@@ -16,21 +16,37 @@
       </script>
       <![endif]-->
 
-    <%= javascript_include_tag 'jquery-1.4.2.min' %>
-    <%= javascript_include_tag 'jquery.jcarousel.min' %>
-    <script type="text/javascript">
-      jQuery(document).ready(function() {
-          jQuery('#schedule_carousel').jcarousel({ scroll: 1 });
-          jQuery('#speaker_carousel').jcarousel({ wrap: 'circular', scroll: 1 });
-          jQuery('#sponsor_carousel').jcarousel({ scroll: 1 });
-      });
-    </script>
-    <%= yield :head %>
-    <%= csrf_meta_tag %>
-  </head>
+      <%= javascript_include_tag 'jquery-1.4.2.min' %>
+      <%= javascript_include_tag 'jquery.jcarousel.min' %>
+      <script type="text/javascript">
+        jQuery(document).ready(function() {
+            jQuery('#schedule_carousel').jcarousel({ scroll: 1 });
+            jQuery('#speaker_carousel').jcarousel({ wrap: 'circular', scroll: 1 });
+            jQuery('#sponsor_carousel').jcarousel({ scroll: 1 });
+            });
+      </script>
+      <%= yield :head %>
+      <%= csrf_meta_tag %>
+    </head>
   <body id="<%= [controller_name.capitalize, action_name.capitalize].join %>">
     <div id="parent_wrapper">
       <div id="wrapper">
+        <header id="head">
+        <div id="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+        <div id="eventdates">
+          <h2>Conference - <span style="color:#fff;">Feb 15-16, 2013</span><br />
+            Union South - Madison, WI</h2>
+        </div>
+        </header>
+        <nav id="menu">
+        <ul>
+          <li><%=link_to "Speakers", speakers_path%></li>
+          <li><%=link_to "Schedule", '#'%></li>
+          <li><%=link_to "Sponsors", sponsors_path%></li>
+          <li><%=link_to "Lodging", '#'%></li>
+          <li><a href="http://2013.snow-mobile.org">Register</a></li>
+        </ul>
+        </nav>
         <%= yield %>
       </div>
     </div>
@@ -45,11 +61,11 @@
       _gaq.push(['_trackPageview']);
 
       (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+       })();
 
-    </script>
+</script>
   </body>
 </html>

@@ -1,4 +1,24 @@
-<h1>Sponsors</h1>
-<ul>
-  <%= render :partial => 'sponsor', :collection => @sponsors %>
-</ul>
+<section id="sponsor_page">
+  <h3>Sponsors</h3><br />
+  <% @sponsors.each do |sponsor| %>
+    <div class="sponsor_info">
+      <p>Company:</p>
+      <%= link_to sponsor.name, sponsor.url %>
+      <br />
+      <br />
+      <p>Twitter:</p>
+      <%= link_to "https://www.twitter.com/#{sponsor.twitter_handle}", sponsor.twitter_handle %>
+      <br />
+      <br />
+      <p>Website:</p>
+      <%= link_to sponsor.url, sponsor.url %>
+    </div>
+    <div class="sponsor_logo"><img src="#{sponsor.image_path}"></div>
+    <div class="sponsor_bio">
+      <p>
+        <%= sponsor.description %>
+      </p>
+    </div>
+    <div class="filler"><hr></div>
+  <% end %>
+</section>

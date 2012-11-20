@@ -1,4 +1,19 @@
-<h1>Speakers</h1>
-<ul class="speakers">
-  <%= render :partial => 'speaker', :collection => @speakers, :as => :speaker %>
-</ul>
+<section id="speaker_page">
+<h3>Speakers</h3><br />
+<% @speakers.each do |speaker| %>
+  <div class="speaker_photo"><%= image_tag speaker.image_path %></div>
+  <div class="speaker_bio">
+    <h2><%= speaker.name %></h2>
+    <p><%= speaker.bio %></p>
+  </div>
+  <div class="speaker_info">
+    <p>Twitter:</p>
+    <%= link_to "@#{speaker.twitter_username}", "http://www.twitter.com/#{speaker.twitter_username}" %>
+    <br />
+    <br />
+    <p>Website:</p>
+    <%= link_to speaker.website_url, speaker.website_url %>
+  </div>
+  <div class="filler"><hr></div>
+<% end %>
+</section>
