@@ -13,7 +13,7 @@
       <p>Website:</p>
       <%= link_to sponsor.url, sponsor.url %>
     </div>
-    <div class="sponsor_logo"><img src="#{sponsor.image_path}"></div>
+    <div class="sponsor_logo"><%= image_tag sponsor.image_path %></div>
     <div class="sponsor_bio">
       <p>
         <%= sponsor.description %>
