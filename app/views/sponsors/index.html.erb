@@ -6,12 +6,16 @@
       <%= link_to sponsor.name, sponsor.url %>
       <br />
       <br />
-      <p>Twitter:</p>
-      <%= link_to "https://www.twitter.com/#{sponsor.twitter_handle}", sponsor.twitter_handle %>
-      <br />
-      <br />
-      <p>Website:</p>
-      <%= link_to sponsor.url, sponsor.url %>
+      <% if sponsor.twitter_handle %>
+        <p>Twitter:</p>
+        <%= link_to "@#{sponsor.twitter_handle}", "https://www.twitter.com/#{sponsor.twitter_handle}" %>
+        <br />
+        <br />
+      <% end %>
+      <% if sponsor.url %>
+        <p>Website:</p>
+        <%= link_to sponsor.url, sponsor.url %>
+      <% end %>
     </div>
     <div class="sponsor_logo"><%= image_tag sponsor.image_path %></div>
     <div class="sponsor_bio">
