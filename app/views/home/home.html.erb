@@ -1,72 +1,14 @@
 <div class="column_alpha">
-  <article class="content_block_alpha">
-    <%= render :partial => "speakers" %>
-  </article>
-
-  <article class="content_block_bravo">
-    <%= render :partial => 'contact' %>
-  </article>
+  <%= render :partial => "speakers" %>
+  <%= render :partial => 'contact' %>
 </div>
 
 <div class="column_bravo">
-  <article class="content_block_bravo">
-    <%= render :partial => 'uxmad' %>
-  </article>
+  <%= render :partial => 'uxmad' %>
+  <%= render :partial => "sponsors" %>
+</div>
 
-    <%= render :partial => "sponsors" %>
-        </div>
-
-        <div class="column_charlie">
-          <article class="content_block_charlie">
-          <header>
-          <h1>register</h1>
-          </header>
-          <section>
-          <h2>Buy your ticket</h2>
-          <p>
-            Two days of mind-expanding content and top-shelf after-parties.
-          </p>
-          <ul id="prices">
-            <li>
-              <strong>
-              $199
-              </strong>
-              &mdash;
-              Very Early Bird Tickets (25 available)
-            </li>
-            <li>
-              <strong>
-              $299
-              </strong>
-              &mdash;
-              Regular Conference Tickets
-            </li>
-          </ul>
-          <p>
-            Workshops to be announced at a later date.
-          </p>
-          <%= link_to "http://2013.uxmad.com", :class => "button", :id => "register_link" do %>
-            Register
-            <span class="iconfont_alpha">2</span>
-          <% end %>
-          </section>
-          </article>
-
-          <article class="content_block_bravo">
-          <header>
-          <h1>travel</h1>
-          </header>
-          <section>
-          <h2>How lost can you really get on an isthmus?</h2>
-          <p>UXMad takes advantage of the beautiful and iconic community owned spaces in Downtown Madison. The workshops take place at Madison College's Downton Campus. The conference proper takes place at the breathtaking Overture Center for the Arts.
-            <p>
-              <iframe width="255" height="255" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=201+State+St,+Madison,+WI+53703&amp;aq=0&amp;oq=201+&amp;sll=37.0625,-95.677068&amp;sspn=36.999937,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=201+State+St,+Madison,+Wisconsin+53703&amp;t=m&amp;z=14&amp;ll=43.07476,-89.388066&amp;output=embed"></iframe>
-              <br />
-              <small>
-                <a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=201+State+St,+Madison,+WI+53703&amp;aq=0&amp;oq=201+&amp;sll=37.0625,-95.677068&amp;sspn=36.999937,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=201+State+St,+Madison,+Wisconsin+53703&amp;t=m&amp;z=14&amp;ll=43.07476,-89.388066" style="color:#0000FF;text-align:left">View Larger Map</a>
-              </small>
-            </p>
-
-            </section>
-            </article>
-          </div>
+<div class="column_charlie">
+  <%= render :partial => 'register' %>
+  <%= render :partial => 'travel' %>
+</div>
